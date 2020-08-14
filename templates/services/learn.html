@@ -1,0 +1,334 @@
+<!doctype html>
+{% extends "base.html"%}
+{% block title%}
+AMIS|Homepage
+{% endblock %}
+
+
+{% block body%}
+{%load static%}
+<div class="sub-header p-relative">
+            <div class="overlay overlay-bg-black"></div>
+            <div class="pattern"></div>
+            <div class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="sub-header-content p-relative">
+                                <h1 class="text-custom-white lh-default fw-600">Learn With Us</h1>
+                                <ul class="custom">
+                                    <li>
+                                        <a href="{% url 'patientDashboard'%}" class="text-custom-white">Home</a>
+                                    </li>
+                                    <li class="text-custom-white active">Learn With Us</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="container" style="margin-top:10px;">
+    <ul class="nav nav-tabs">
+        <li class=""><a href="#home" data-toggle="tab" aria-expanded="false">First-Aids</a></li>
+        <li class="active"><a href="#profile" data-toggle="tab" aria-expanded="true">First-Medecine</a></li>
+        <li class="active"><a href="#aids" data-toggle="tab" aria-expanded="true">Domestic-Aids</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade" id="home">
+            <div class="container mt-3">
+                <h2 class="text-success"><em>First-Aids</em></h2>
+                <p>Type something in the input About Your Problem</p>
+                <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                <br>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>SR.No</th>
+                        <th>About Problems</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="myTable">
+                    <tr>
+                        <td class="text-info">1</td>
+                        <td class="text-danger">Doe</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-info">2</td>
+                        <td class="text-danger">Moe</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-info">3</td>
+                        <td class="text-danger">Dooley</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-info">4</td>
+                        <td class="text-danger">Ravendale</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="tab-pane fade active in" id="profile">
+            <div class="container mt-3">
+                <h2 class="text-success"><em>First-Medicene</em></h2>
+                <p>Type something in the input About Your Problem</p>
+                <input class="form-control" id="myInputed" type="text" placeholder="Search..">
+                <br>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>SR.No</th>
+                        <th>About Problems</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="myTableed">
+                    <tr>
+                        <td class="text-info">1</td>
+                        <td class="text-danger">Doe</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-info">2</td>
+                        <td class="text-danger">Moe</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-info">4</td>
+                        <td class="text-danger">Ravendale</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-info">4</td>
+                        <td class="text-danger">Ravendale</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+
+        </div>
+        <div class="tab-pane fade" id="aids">
+            <div class="container mt-3">
+                <h2 class="text-success"><em>Domestic-Aids</em></h2>
+                <p>Type something in the input About Your Problem</p>
+                <input class="form-control" id="myInputing" type="text" placeholder="Search..">
+                <br>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>SR.No</th>
+                        <th>About Problems</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="myTableing">
+                    <tr>
+                        <td class="text-info">1</td>
+                        <td class="text-danger">Doe</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-info">2</td>
+                        <td class="text-danger">Moe</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-info">2</td>
+                        <td class="text-danger">Moe</td>
+                        <td><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <section class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap flex-col">
+    <div class="flex mx-auto flex-wrap mb-20">
+      <a class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>STEP 1:Apply First-Aid
+      </a>
+      <a class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+        </svg>STEP 2:Give First-Med
+      </a>
+      <a class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+          <circle cx="12" cy="5" r="3"></circle>
+          <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+        </svg>STEP 3:Consert Near-Doctors
+      </a>
+      <a class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>STEP 4:Proper Care
+      </a>
+    </div>
+    <img class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 block mx-auto mb-10 object-cover object-center rounded" alt="hero" src="{%static "assets/images/doclogo.png"%}">
+    <section class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-5xl text-4xl font-medium title-font mb-4 text-gray-900">Consult Our Expert Teams</h1>
+     </div><center>
+      <a href="{% url 'expert'%}" class="btn btn-primary">Default button</a></center>
+  </div>
+</section>
+  </div>
+</section>
+
+
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<div class="container">
+<hr class="my-4" style="height:2px;border-width:0;color:gray;background-color:gray">
+  <div>
+        <footer class="section-padding bg-custom-white footer-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-box mb-md-40">
+
+                            <div class="logo">
+
+                                <a href="#">
+
+                                    <h2>AMIS</h2>
+                                </a>
+
+                            </div>
+
+                            <p class="text-custom-black no-margin">
+
+                               Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to emulate human cognition
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-md-40">
+
+                            <h5 class="text-custom-black fw-600">Working Time</h5>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Mon - Wed: <span class="text-custom-black fw-600">9:00 AM - 7:00 PM</span><br>
+
+                                Thursday: <span class="text-custom-black fw-600">9:00 AM - 6:30 PM</span><br>
+
+                                Friday: <span class="text-custom-black fw-600">9:00 AM - 6:00 PM</span><br>
+
+                                Sat - Sun: <span class="text-custom-black fw-600">Closed</span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-sm-40">
+
+                            <h5 class="text-custom-black fw-600">Emergency Cases</h5>
+
+                            <h4 class="text-light-blue fw-600">1-800-123-4567</h4>
+
+                            <p class="no-margin text-custom-black fs-14">when you are faced with an emergency or injury, you will know what to do. Your confidence</p>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info">
+
+                            <h5 class="text-custom-black fw-600">Our Location</h5>
+
+                            <p class="text-custom-black fs-14">O46F SDC Gorakhpur,<br>Uttar Pradesh</p>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Email: <a href="#" class="text-custom-black fw-600">info@amis.com</a><br>
+
+                                Phone: <a href="#" class="text-custom-black fw-600">+(347) 123 456 7890</a>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+    </script>
+
+    <script>
+$(document).ready(function(){
+  $("#myInputed").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTableed tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+    </script>
+    <script>
+$(document).ready(function(){
+  $("#myInputing").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTableing tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+    </script>
+
+    {% endblock %}

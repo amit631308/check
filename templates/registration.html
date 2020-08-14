@@ -1,0 +1,76 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title> SignUp Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static "assets/css/regstyle.css"%}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1><marquee direction="right" behavior="alternate"><em class="navbar-brand " >ADVANCE MEDICAL INTEGRATION SYSTEM </em></a></marquee></h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="{% url 'registration' %}" method="post">
+					{%csrf_token%}
+					<input class="text" type="text" name="fname" placeholder="Enter First Name..." required="">
+					<input class="text email" type="text" name="lname" placeholder="Enter Last Name..." required="">
+					<input class="text email" type="email" name="email" placeholder="Enter Email" required="">
+
+					<select class=" form-control" name="utype" id="exampleSelect1" >
+					  <option>--SELCT TYPE--</option>
+					  <option value="patient">User</option>
+					  <option value="doctor">DOCTOR</option>
+					  <option value="pharmacist">PHARMACIST</option>
+					  <option value="lab">LAB</option>
+					</select>
+					<input class="text" type="password" name="password" placeholder="Enter Password" required="">
+
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" name="checkbox" class="checkbox" required="">
+							<span>I Agree To The Terms & Conditions</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="SIGNUP">
+				</form>
+				<p>Already have an Account? <a href="{% url 'login'%}"> Login Here!</a></p>
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="colorlibcopy-agile">
+			<p>© 2018 Colorlib Signup Form. All rights reserved | Design by <a href="https://colorlib.com/" target="_blank">Colorlib</a></p>
+		</div>
+		<!-- //copyright -->
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+	{% if status %}
+    <script>
+        alert("{{status}}");
+        window.location = "/registration/"
+    </script>
+    {%endif%}
+</body>
+</html>

@@ -1,0 +1,285 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta name="keywords" content="#">
+
+    <meta name="description" content="#">
+
+
+    <!-- Fav and touch icons -->
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{%static "assets/images/favicon.ico"%}"
+
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{%static "assets/images/favicon.ico"%}"
+
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{%static "assets/images/favicon.ico"%}"
+
+    <link rel="apple-touch-icon-precomposed" href="#">
+
+    <link rel="shortcut icon" href="{%static "assets/images/favicon.ico"%}">
+
+    <!-- Bootstrap -->
+
+    <link href="{%static "assets/css/bootstrap.min.css"%}" rel="stylesheet">
+
+    <!-- Fontawesome -->
+
+    <link href="{%static "assets/css/font-awesome.css"%}" rel="stylesheet">
+
+    <!-- Flaticons -->
+
+    <link href="{%static "assets/css/font/flaticon.css"%}" rel="stylesheet">
+
+    <!-- Slick Slider -->
+
+    <link href="{%static "assets/css/slick.css"%}" rel="stylesheet">
+
+    <!-- Range Slider -->
+
+    <link href="{%static "assets/css/ion.rangeSlider.min.css"%}" rel="stylesheet">
+
+    <!-- Datepicker -->
+
+    <link href="{%static "assets/css/datepicker.css"%}" rel="stylesheet">
+
+    <!-- magnific popup -->
+
+    <link href="{%static "assets/css/magnific-popup.css"%}" rel="stylesheet">
+
+    <!-- Nice Select -->
+
+    <link href="{%static "assets/css/nice-select.css"%}" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+
+    <link href="{%static "assets/css/style.css"%}" rel="stylesheet">
+
+    <!-- Custom Responsive -->
+
+    <link href="{%static "assets/css/responsive.css"%}" rel="stylesheet">
+
+    <!-- Color Change -->
+
+    	<link rel="stylesheet" class="color-changing" href="{%static "assets/css/style.css"%}">
+     <meta name="description" content="">
+    <meta name="author" content="Design Hunt">
+
+    <!-- Fav Icon  -->
+    <link rel=shortcut icon" href="{%static "assets/images/favicon.png"%}">
+    <link href="{%static "images/favicon.ico"%}" rel="shortcut icon" type="image/x-icon">
+    <link href="{%static "images/favicon.ico"%}" rel="icon" type="image/x-icon">
+
+    <!-- Site Title  -->
+
+    <!-- Vendor Bundles CSS -->
+    <link rel="stylesheet" href="{%static "assets/css/vendor.bundle.css"%}" >
+
+    <!-- Custom Styles for this template -->
+    <link rel="stylesheet" href="{%static "assets/css/costyle.css"%}">
+
+    <!-- Google Fonts -->
+
+    <link href="../../../../external.html?link=https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;display=swap" rel="stylesheet">
+
+    <link href="../../../../external.html?link=https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+
+    <title> {% block title %}
+        {% endblock %}</title>
+  </head>
+  <body>
+    
+         <!-- Start Header -->
+
+         <header class="header-style-1">
+
+          <!-- Start Topbar -->
+
+
+          <!-- End Topbar -->
+
+          <!-- Start Navigation -->
+
+          <div class="main-navigation-style-1">
+
+              <div class="container">
+
+                  <div class="row">
+
+                      <div class="col-12">
+
+                          <div class="navigation">
+
+                              <div class="logo">
+
+                                  <a href="#">
+
+                                     <marquee direction="right" behavior="alternate"><em class="navbar-brand " href="#">AMIS </b></a></marquee>
+
+                                  </a>
+
+                              </div>
+
+                              <div class="main-menu">
+
+                                  <div class="mobile-logo">
+
+                                      <a href="{% url 'patientDashboard'%}">
+
+                                          <img src="{%static "assets/images/logo.png"%}" class="img-fluid image-fit" alt="Logo">
+
+                                      </a>
+
+                                  </div>
+
+                                  <nav>
+
+                                      <ul class="custom">
+
+                                          <li class="menu-item active">
+
+                                              <a href="{% url 'patientDashboard'%}" class="text-custom-white">Homepages</a>
+
+                                          </li>
+
+                                          <li class="menu-item">
+
+                                              <a href="{% url 'aboutus'%}" class="text-custom-white">About Us</a>
+
+                                          </li>
+
+                                          <li class="menu-item">
+
+                                              <a href="{% url 'doctors'%}" class="text-custom-white">Doctors</a>
+
+
+                                          </li>
+
+                                          <li class="menu-item">
+
+                                              <a href="{% url 'check'%}" class="text-custom-white">Self-check</a>
+
+
+                                          </li>
+
+                                         <li class="menu-item ">
+
+                                              <a href="{% url 'service'%}" class="text-custom-white">Services</a>
+
+
+
+                                          </li>
+
+                                          <li class="menu-item">
+
+                                              <a href="{% url 'profile'%}" class="text-custom-white">Profile</a>
+
+                                          </li>
+                                          {% if user.is_authenticated %}
+                                          <li class="menu-item">
+
+                                              <a href="{% url 'profile'%}" class="text-custom-white">({{user.first_name}})</a>
+
+
+                                          </li>
+                                          <li class="menu-item">
+
+                                              <a href="{% url 'user_logout' %}" class="text-custom-white">Logout</a>
+
+                                          </li>
+                                         
+                                          
+                                          {% endif %}
+
+                                      </ul>
+
+                                  </nav>
+
+                                  <div class="right-side">
+
+                                      <div class="cta-btn">
+
+                                          <a href="{% url 'appointment'%}" class="btn-first btn-submit">
+
+                                              Appointment
+
+                                          </a>
+
+                                      </div>
+
+                                  </div>
+
+                              </div>
+
+                              <div class="hamburger-menu">
+
+                                  <div class="menu-btn">
+
+                                      <span></span>
+
+                                      <span></span>
+
+                                      <span></span>
+
+                                  </div>
+
+                              </div>
+
+                          </div>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- End Navigation -->
+
+      </header>
+
+      <!-- End Header -->
+
+      
+    {% block body %}
+
+    
+
+
+    {% endblock %}
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://kit.fontawesome.com/f82e9572c8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

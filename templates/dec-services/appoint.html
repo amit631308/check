@@ -1,0 +1,537 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+		<meta charset="utf-8">
+		<title>Doc|Dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+		<!-- Favicons -->
+		<link href="{%static "assets/img/favicon.png"%}" rel="icon">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{%static "assets/css/bootstrap.min.css"%}">
+
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="{%static "assets/plugins/fontawesome/css/fontawesome.min.css"%}">
+		<link rel="stylesheet" href="{%static "assets/plugins/fontawesome/css/all.min.css"%}">
+
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="{%static "assets/css/docstyle.css"%}">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="{%static "assets/js/html5shiv.min.js"%}"></script>
+			<script src="{%static "assets/js/respond.min.js"%"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- Header -->
+			<!-- /Header -->
+
+			<!-- Breadcrumb -->
+			<div class="breadcrumb-bar">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="{% url 'doctorDashboard'%}">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Appointments</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">Appointments</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Breadcrumb -->
+
+			<!-- Page Content -->
+			<div class="content">
+				<div class="container-fluid">
+
+					<div class="row">
+						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+
+							<!-- Profile Sidebar -->
+							<div class="profile-sidebar">
+								<div class="widget-profile pro-widget-content">
+									<div class="profile-info-widget">
+										<a href="#" class="booking-doc-img">
+											<img src="{%static "assets/images/doctors/doctor-thumb-02.jpg"%}" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3>Dr. Darren Elder</h3>
+
+											<div class="patient-details">
+												<h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-widget">
+									<nav class="dashboard-menu">
+										<ul>
+											<li>
+												<a href="{% url 'doctorDashboard'%}">
+													<i class="fas fa-columns"></i>
+													<span>Dashboard</span>
+												</a>
+											</li>
+											<li class="active">
+												<a href="{% url 'appoint'%}">
+													<i class="fas fa-calendar-check"></i>
+													<span>Appointments</span>
+												</a>
+											</li>
+
+											<li>
+												<a href="{% url 'sechtime'%}">
+													<i class="fas fa-hourglass-start"></i>
+													<span>Schedule Timings</span>
+												</a>
+											</li>
+											<li>
+												<a href="{% url 'invoice'%}">
+													<i class="fas fa-file-invoice"></i>
+													<span>Invoices</span>
+												</a>
+											</li>
+
+											<li>
+												<a href="{% url 'chat'%}">
+													<i class="fas fa-comments"></i>
+													<span>Message</span>
+													<small class="unread-msg">23</small>
+												</a>
+											</li>
+											<li>
+												<a href="{% url 'profilesetting'%}">
+													<i class="fas fa-user-cog"></i>
+													<span>Profile Settings</span>
+												</a>
+											</li>
+
+											<li>
+												<a href="{% url 'login'%}">
+													<i class="fas fa-lock"></i>
+													<span>Change Password</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fas fa-sign-out-alt"></i>
+													<span>Logout</span>
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<!-- /Profile Sidebar -->
+
+						</div>
+
+						<div class="col-md-7 col-lg-8 col-xl-9">
+							<div class="appointments">
+
+								<!-- Appointment List -->
+								<div class="appointment-list">
+									<div class="profile-info-widget">
+										<a href="patient-profile.html" class="booking-doc-img">
+											<img src="{%static "assets/images/patients/patient.jpg"%}" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3><a href="patient-profile.html">Richard Wilson</a></h3>
+											<div class="patient-details">
+												<h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
+												<h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
+												<h5><i class="fas fa-envelope"></i> richard@example.com</h5>
+												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 923 782 4575</h5>
+											</div>
+										</div>
+									</div>
+									<div class="appointment-action">
+										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
+											<i class="far fa-eye"></i> View
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+											<i class="fas fa-check"></i> Accept
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+											<i class="fas fa-times"></i> Cancel
+										</a>
+									</div>
+								</div>
+								<!-- /Appointment List -->
+
+								<!-- Appointment List -->
+								<div class="appointment-list">
+									<div class="profile-info-widget">
+										<a href="patient-profile.html" class="booking-doc-img">
+											<img src="{%static "assets/images/patients/patient1.jpg"%}" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3><a href="patient-profile.html">Charlene Reed </a></h3>
+											<div class="patient-details">
+												<h5><i class="far fa-clock"></i> 12 Nov 2019, 5.00 PM</h5>
+												<h5><i class="fas fa-map-marker-alt"></i> North Carolina, United States</h5>
+												<h5><i class="fas fa-envelope"></i> charlenereed@example.com</h5>
+												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 828 632 9170</h5>
+											</div>
+										</div>
+									</div>
+									<div class="appointment-action">
+										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
+											<i class="far fa-eye"></i> View
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+											<i class="fas fa-check"></i> Accept
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+											<i class="fas fa-times"></i> Cancel
+										</a>
+									</div>
+								</div>
+								<!-- /Appointment List -->
+
+								<!-- Appointment List -->
+								<div class="appointment-list">
+									<div class="profile-info-widget">
+										<a href="patient-profile.html" class="booking-doc-img">
+											<img src="{%static "assets/images/patients/patient2.jpg"%}" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3><a href="patient-profile.html">Travis Trimble</a></h3>
+
+											<div class="patient-details">
+												<h5><i class="far fa-clock"></i> 11 Nov 2019, 8.00 PM</h5>
+												<h5><i class="fas fa-map-marker-alt"></i> Maine, United States</h5>
+												<h5><i class="fas fa-envelope"></i> travistrimble@example.com</h5>
+												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 207 729 9974</h5>
+											</div>
+										</div>
+									</div>
+									<div class="appointment-action">
+										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
+											<i class="far fa-eye"></i> View
+										</a>
+
+										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+											<i class="fas fa-check"></i> Accept
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+											<i class="fas fa-times"></i> Cancel
+										</a>
+									</div>
+								</div>
+								<!-- /Appointment List -->
+
+								<!-- Appointment List -->
+								<div class="appointment-list">
+									<div class="profile-info-widget">
+										<a href="patient-profile.html" class="booking-doc-img">
+											<img src="{%static "assets/images/patients/patient3.jpg"%}" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3><a href="patient-profile.html">Carl Kelly</a></h3>
+											<div class="patient-details">
+												<h5><i class="far fa-clock"></i> 9 Nov 2019, 9.00 AM</h5>
+												<h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
+												<h5><i class="fas fa-envelope"></i> carlkelly@example.com</h5>
+												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 260 724 7769</h5>
+											</div>
+										</div>
+									</div>
+									<div class="appointment-action">
+										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
+											<i class="far fa-eye"></i> View
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+											<i class="fas fa-check"></i> Accept
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+											<i class="fas fa-times"></i> Cancel
+										</a>
+									</div>
+								</div>
+								<!-- /Appointment List -->
+
+								<!-- Appointment List -->
+								<div class="appointment-list">
+									<div class="profile-info-widget">
+										<a href="patient-profile.html" class="booking-doc-img">
+											<img src="{%static "assets/images/patients/patient4.jpg"%}" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3><a href="patient-profile.html">Michelle Fairfax</a></h3>
+											<div class="patient-details">
+												<h5><i class="far fa-clock"></i> 9 Nov 2019, 1.00 PM</h5>
+												<h5><i class="fas fa-map-marker-alt"></i> Indiana, United States</h5>
+												<h5><i class="fas fa-envelope"></i> michellefairfax@example.com</h5>
+												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 504 368 6874</h5>
+											</div>
+										</div>
+									</div>
+									<div class="appointment-action">
+										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
+											<i class="far fa-eye"></i> View
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+											<i class="fas fa-check"></i> Accept
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+											<i class="fas fa-times"></i> Cancel
+										</a>
+									</div>
+								</div>
+								<!-- /Appointment List -->
+
+								<!-- Appointment List -->
+								<div class="appointment-list">
+									<div class="profile-info-widget">
+										<a href="patient-profile.html" class="booking-doc-img">
+											<img src="{%static "assets/images/patients/patient5.jpg"%}" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3><a href="patient-profile.html">Gina Moore</a></h3>
+											<div class="patient-details">
+												<h5><i class="far fa-clock"></i> 8 Nov 2019, 3.00 PM</h5>
+												<h5><i class="fas fa-map-marker-alt"></i> Florida, United States</h5>
+												<h5><i class="fas fa-envelope"></i> ginamoore@example.com</h5>
+												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 954 820 7887</h5>
+											</div>
+										</div>
+									</div>
+									<div class="appointment-action">
+										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
+											<i class="far fa-eye"></i> View
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+											<i class="fas fa-check"></i> Accept
+										</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+											<i class="fas fa-times"></i> Cancel
+										</a>
+									</div>
+								</div>
+								<!-- /Appointment List -->
+
+								<!-- Appointment List -->
+								<!-- /Appointment List -->
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- /Page Content -->
+
+			<!-- Footer -->
+			<footer class="footer">
+
+				<!-- Footer Top -->
+				<div class="footer-top">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-about">
+									<div class="footer-logo">
+									<h1>AMIS</h1>
+									</div>
+									<div class="footer-about-content">
+										<p>Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to emulate human cognition
+                            <div class="social-icon">
+											<ul>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- /Footer Widget -->
+
+							</div>
+
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<!-- /Footer Widget -->
+
+							</div>
+
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-menu">
+									<h2 class="footer-title">For Doctors</h2>
+									<ul>
+										<li><a href="appointments.html">Appointments</a></li>
+										<li><a href="chat.html">Chat</a></li>
+										<li><a href="login.html">Login</a></li>
+										<li><a href="doctor-register.html">Register</a></li>
+										<li><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
+									</ul>
+								</div>
+								<!-- /Footer Widget -->
+
+							</div>
+
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-contact">
+									<h2 class="footer-title">Contact Us</h2>
+									<div class="footer-contact-info">
+										<div class="footer-address">
+											<span><i class="fas fa-map-marker-alt"></i></span>
+											<p> 3556  Beech Street, San Francisco,<br> California, CA 94108 </p>
+										</div>
+										<p>
+											<i class="fas fa-phone-alt"></i>
+											+1 315 369 5943
+										</p>
+										<p class="mb-0">
+											<i class="fas fa-envelope"></i>
+											doccure@example.com
+										</p>
+									</div>
+								</div>
+								<!-- /Footer Widget -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- /Footer Top -->
+
+				<!-- Footer Bottom -->
+                <div class="footer-bottom">
+					<div class="container-fluid">
+
+						<!-- Copyright -->
+						<div class="copyright">
+							<div class="row">
+								<div class="col-md-6 col-lg-6">
+									<div class="copyright-text">
+										<p class="mb-0">&copy; 2020 Doccure. All rights reserved.</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-6">
+
+									<!-- Copyright Menu -->
+									<div class="copyright-menu">
+										<ul class="policy-menu">
+											<li><a href="term-condition.html">Terms and Conditions</a></li>
+											<li><a href="privacy-policy.html">Policy</a></li>
+										</ul>
+									</div>
+									<!-- /Copyright Menu -->
+
+								</div>
+							</div>
+						</div>
+						<!-- /Copyright -->
+
+					</div>
+				</div>
+				<!-- /Footer Bottom -->
+
+			</footer>
+			<!-- /Footer -->
+
+		</div>
+		<!-- /Main Wrapper -->
+
+		<!-- Appointment Details Modal -->
+		<div class="modal fade custom-modal" id="appt_details">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Appointment Details</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<ul class="info-details">
+							<li>
+								<div class="details-header">
+									<div class="row">
+										<div class="col-md-6">
+											<span class="title">#APT0001</span>
+											<span class="text">21 Oct 2019 10:00 AM</span>
+										</div>
+										<div class="col-md-6">
+											<div class="text-right">
+												<button type="button" class="btn bg-success-light btn-sm" id="topup_status">Completed</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="title">Status:</span>
+								<span class="text">Completed</span>
+							</li>
+							<li>
+								<span class="title">Confirm Date:</span>
+								<span class="text">29 Jun 2019</span>
+							</li>
+							<li>
+								<span class="title">Paid Amount</span>
+								<span class="text">$450</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Appointment Details Modal -->
+
+		<!-- jQuery -->
+		<script src="{%static "assets/js/jquery.min.js"%}"></script>
+
+		<!-- Bootstrap Core JS -->
+		<script src="{%static "assets/js/popper.min.js"%}"></script>
+		<script src="{%static "assets/js/bootstrap.min.js"%}"></script>
+
+		<!-- Sticky Sidebar JS -->
+        <script src="{%static "assets/plugins/theia-sticky-sidebar/ResizeSensor.js"%}"></script>
+        <script src="{%static "assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"%}"></script>
+
+		<!-- Circle Progress JS -->
+		<script src="{%static "assets/js/circle-progress.min.js"%"></script>
+
+		<!-- Custom JS -->
+		<script src="{%static "assets/js/script.js"%}"></script>
+
+	</body>
+
+<!-- Mirrored from doccure-html.dreamguystech.com/template/appointments.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2020 11:50:05 GMT -->
+</html>

@@ -1,0 +1,461 @@
+<!doctype html>
+{% extends "base.html"%}
+{% block title%}
+AMIS|Service
+{% endblock %}
+
+
+{% block body%}
+{%load static%}
+<body class="animated-banner">
+
+    <!-- Start Main Body -->
+
+    <div class="main-body">
+
+       
+        <!-- Start Subheader -->
+        <div class="sub-header p-relative">
+            <div class="overlay overlay-bg-black"></div>
+            <div class="pattern"></div>
+            <div class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="sub-header-content p-relative">
+                                <h1 class="text-custom-white lh-default fw-600">Service Detail</h1>
+                                <ul class="custom">
+                                    <li>
+                                        <a href="{% url 'patientDashboard'%}" class="text-custom-white">Home</a>
+                                    </li>
+                                    <li class="text-custom-white active">Service Detail</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Subheader -->
+        <!-- Start Service -->
+        <section class="section-padding bg-light-white service-page">
+            <div class="container">
+                <div class="row">
+                    <aside class="col-lg-4">
+                        <div class="sidebar_wrap mb-md-80">
+                            <div class="sidebar">
+                                <div class="sidebar_widgets mb-xl-30">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">Search</h5>
+                                    </div>
+                                    <form>
+                                        <div class="form-group mb-0">
+                                            <div class="search p-relative">
+                                                <input type="text" name="#" class="form-control form-control-custom" placeholder="Title or keywords">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="sidebar_widgets mb-xl-30">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">AMIS Services</h5>
+                                    </div>
+                                    <ul class="custom sidebar-services">
+                                        <li class="active">
+                                            <a href="{% url 'check'%}" class="text-custom-black fs-14">Self-Check <span><i class="fas fa-chevron-right"></i></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'tech'%}" class="text-custom-black fs-14">Online-Lab<span><i class="fas fa-chevron-right"></i></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'shop'%}" class="text-custom-black fs-14">Online-Pharmacy<span><i class="fas fa-chevron-right"></i></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'expert'%}" class="text-custom-black fs-14">Expert-Teams<span><i class="fas fa-chevron-right"></i></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'learn'%}" class="text-custom-black fs-14">Learn with Us<span><i class="fas fa-chevron-right"></i></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sciencedaily.com/news/health_medicine/" class="text-custom-black fs-14">Latest News Updates<span><i class="fas fa-chevron-right"></i></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar_widgets mb-xl-30">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">Opening Hours</h5>
+                                    </div>
+                                    <table class="table text-custom-black">
+                                        <tbody>
+                                            <tr>
+                                                <td>Mon – Wed</td>
+                                                <td> - </td>
+                                                <td class="text-right">9:00 AM - 7:00 PM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thursday</td>
+                                                <td> - </td>
+                                                <td class="text-right">9:00 AM - 6:30 PM</td>
+                                            </tr>
+                                             <tr>
+                                                <td>Friday</td>
+                                                <td> - </td>
+                                                <td class="text-right">9:00 AM - 6:00 PM</td>
+                                            </tr>
+                                            <tr class="last-tr">
+                                                <td>Sun - Sun</td>
+                                                <td>-</td>
+                                                <td class="text-right">CLOSED</td>
+                                             </tr>
+                                          </tbody>
+                                    </table>
+                                </div>
+                                <div class="sidebar_widgets">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">Recent News</h5>
+                                    </div>
+                                    <ul class="custom popular_post">
+                                        <li>
+                                            <div class="post">
+                                                <div class="post-wrapper">
+                                                    <div class="popular_post_img animate-img">
+                                                        <a href="blog-single.html">
+                                                            <img src="{%static "assets/images/blog/sblog1.jpg"%}" class="img-fluid image-fit" alt="#">
+                                                        </a>
+                                                    </div>
+                                                    <div class="popular_post_title">
+                                                        <div class="post-date">
+                                                            <p class="text-light-white no-margin">12 Dec 2019</p>
+                                                        </div>
+                                                        <h6><a href="blog-single.html" class="text-custom-black fs-16 fw-600">8 Tips to Help You Finding New Home</a></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="post">
+                                                <div class="post-wrapper">
+                                                    <div class="popular_post_img animate-img">
+                                                        <a href="blog-single.html">
+                                                            <img src="{%static "assets/images/blog/sblog2.jpg"%}" class="img-fluid image-fit" alt="#">
+                                                        </a>
+                                                    </div>
+                                                    <div class="popular_post_title">
+                                                        <div class="post-date">
+                                                            <p class="text-light-white no-margin">12 Dec 2019</p>
+                                                        </div>
+                                                        <h6><a href="blog-single.html" class="text-custom-black fs-16 fw-600">8 Tips to Help You Finding New Home</a></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="post">
+                                                <div class="post-wrapper">
+                                                    <div class="popular_post_img animate-img">
+                                                        <a href="#">
+                                                            <img src="{%static "assets/images/blog/sblog3.jpg"%}" class="img-fluid image-fit" alt="#">
+                                                        </a>
+                                                    </div>
+                                                    <div class="popular_post_title">
+                                                        <div class="post-date">
+                                                            <p class="text-light-white no-margin">12 Dec 2019</p>
+                                                        </div>
+                                                        <h6><a href="#" class="text-custom-black fs-16 fw-600">8 Tips to Help You Finding New Home</a></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="col-lg-8">
+                        <div class="col-12">
+                            <div class="service-detail-sec bg-custom-white bx-wrapper">
+                                <div class="services-detail-slider mb-xl-30">
+                                    <div class="service-image">
+                                        <img src="{%static "assets/images/services.jpg"%}" class="image-fit" alt="img">
+                                        <div class="overlay overlay-bg-black"></div>
+                                        <div class="service-text-wrapper transform-center">
+                                            <h3 class="text-custom-white">We offer highly specialized treatments</h3>
+                                            <a href="#" class="btn-first btn-submit">Make Appointment</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-image">
+                                        <img src="{%static "assets/images/services1.jpg"%}" class="image-fit" alt="img">
+                                        <div class="overlay overlay-bg-black"></div>
+                                        <div class="service-text-wrapper transform-center">
+                                            <h3 class="text-custom-white">We offer highly specialized treatments</h3>
+                                            <a href="#" class="btn-first btn-submit">Make Appointment</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-image">
+                                        <img src="{%static "assets/images/services2.jpg"%}" class="image-fit" alt="img">
+                                        <div class="overlay overlay-bg-black"></div>
+                                        <div class="service-text-wrapper transform-center">
+                                            <h3 class="text-custom-white">We offer highly specialized treatments</h3>
+                                            <a href="#" class="btn-first btn-submit">Make Appointment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-meta mb-xl-30">
+                                    <h2 class="text-custom-black fw-600">General and Preventive Care</h2>
+                                    <p class="text-light-white">Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida.</p>
+                                    <p class="text-light-white">Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida.</p>
+                                    <h4 class="text-custom-black fw-600">What we do ?.</h4>
+                                    <p class="text-light-white">Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida.</p>
+                                    <h4 class="text-custom-black fw-600">What the procedure ?.</h4>
+                                    <p class="text-light-white no-margin">Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida.</p>
+                                </div>
+                            </div>
+
+        </section>
+        <!-- End Service -->
+        <!-- Start Newsletter -->
+        <section class="newsletter-style-1 section-padding bg-light-blue">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="newsletter-content-wrapper mb-md-40">
+                            <h3 class="text-custom-white fw-600">Join Our Newsletter</h3>
+                            <p class="text-custom-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="newsletter-form-wrapper">
+                            <form>
+                                <div class="input-group">
+                                    <input type="email" name="#" class="form-control form-control-custom" placeholder="Email Id">
+                                    <div class="input-group-append">
+                                        <button type="submit">Subscribe</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Newsletter -->
+        <!-- Start Footer -->
+       <footer class="section-padding bg-custom-white footer-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-box mb-md-40">
+
+                            <div class="logo">
+
+                                <a href="#">
+
+                                    <h2>AMIS</h2>
+                                </a>
+
+                            </div>
+
+                            <p class="text-custom-black no-margin">
+
+                               Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to emulate human cognition
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-md-40">
+
+                            <h5 class="text-custom-black fw-600">Working Time</h5>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Mon - Wed: <span class="text-custom-black fw-600">9:00 AM - 7:00 PM</span><br>
+
+                                Thursday: <span class="text-custom-black fw-600">9:00 AM - 6:30 PM</span><br>
+
+                                Friday: <span class="text-custom-black fw-600">9:00 AM - 6:00 PM</span><br>
+
+                                Sat - Sun: <span class="text-custom-black fw-600">Closed</span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-sm-40">
+
+                            <h5 class="text-custom-black fw-600">Emergency Cases</h5>
+
+                            <h4 class="text-light-blue fw-600">1-800-123-4567</h4>
+
+                            <p class="no-margin text-custom-black fs-14">when you are faced with an emergency or injury, you will know what to do. Your confidence</p>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info">
+
+                            <h5 class="text-custom-black fw-600">Our Location</h5>
+
+                            <p class="text-custom-black fs-14">O46F SDC Gorakhpur,<br>Uttar Pradesh</p>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Email: <a href="#" class="text-custom-black fw-600">info@amis.com</a><br>
+
+                                Phone: <a href="#" class="text-custom-black fw-600">+(347) 123 456 7890</a>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- End Footer -->
+
+        <!-- Start Copyright -->
+
+        <div class="copyright-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 align-self-center">
+
+                        <p class="text-custom-black">
+
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="social-media mb-xl-20">
+
+                            <ul class="custom">
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-facebook-f"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-twitter"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-linkedin"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-youtube"></i></a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- End Copyright -->
+
+        <!-- back to top -->
+
+        <div id="back-top" class="back-top">
+
+          <a href="#top"><i class="flaticon-up-arrow"></i></a>
+
+        </div>
+
+    </div>
+
+    <!-- End Main Body -->
+
+       <!-- Builder Pannel start-->
+
+
+
+    <!-- Builder Pannel end-->
+
+
+
+    <!-- Theme skins -->
+
+
+  <!-- Theme skins -->
+
+    <!-- Place all Scripts Here -->
+
+    <!-- jQuery -->
+
+    <script src="{%static "assets/js/jquery.min.js"%}"></script>
+
+    <!-- Popper -->
+
+    <script src="assets/js/popper.min.js"%}"></script>
+
+    <!-- Bootstrap -->
+
+    <script src="{%static "assets/js/bootstrap.min.js"%}"></script>
+
+    <!-- Range Slider -->
+
+    <script src="{%static "assets/js/ion.rangeSlider.min.js"%}"></script>
+
+    <!-- Slick Slider -->
+
+    <script src="{%static "assets/js/slick.min.js"%}"></script>
+
+    <!-- Datepicker -->
+
+    <script src="{%static "assets/js/datepicker.js"%}"></script>
+
+    <script src="{%static "assets/js/datepicker.en.js"%}"></script>
+
+    <!-- Nice Select -->
+
+    <script src="{%static "assets/js/jquery.nice-select.js"%}"></script>
+
+    <!-- Nice Select -->
+
+    <script src="{%static "assets/js/particles.js"%}"></script>
+
+    <!-- Magnific Popup -->
+
+    <script src="{%static "assets/js/jquery.magnific-popup.min.js"%}"></script>
+
+    <!-- Google Map -->
+
+    <script src="../../../../external.html?link=https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+
+    <!-- Isotope Gallery -->
+
+    <script src="{%static "assets/js/isotope.pkgd.min.js"%}"></script>
+
+    <!-- Custom Js -->
+
+    <script src="{%static "assets/js/custom.js"%}"></script>
+
+    <!-- /Place all Scripts Here -->
+
+
+{% endblock %}

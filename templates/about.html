@@ -1,0 +1,570 @@
+<!doctype html>
+{% extends "base.html"%}
+{% block title%}
+AMIS|Homepage
+{% endblock %}
+
+
+{% block body%}
+{%load static%}
+<body class="animated-banner">
+
+    <!-- Start Main Body -->
+
+    <div class="main-body">
+
+       
+        <!-- Start Subheader -->
+        <div class="sub-header p-relative">
+            <div class="overlay overlay-bg-black"></div>
+            <div class="pattern"></div>
+            <div class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="sub-header-content p-relative">
+                                <h1 class="text-custom-white lh-default fw-600">About Us</h1>
+                                <ul class="custom">
+                                    <li>
+                                        <a href="{% url 'patientDashboard'%}" class="text-custom-white">Home</a>
+                                    </li>
+                                    <li class="text-custom-white active">About Us</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Subheader -->
+        <!-- Start About -->
+        <section class="section-padding bg-light-white about-story">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">A Story To Our Journey</h3>
+                        <img src="{%static "assets/images/title-icon.png"%}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                It’s a lot to have to consider, and we know that doctors and medical professionals have much more important things to worry about than what to put on your Appicati
+
+On the other hand, we denounce with righteous indignation the foult anuals dislike men who are so beguiled and demoralized by the nuhaiicharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tabs square-tabs">
+                            <ul class="nav nav-tabs custom p-relative mb-xl-30">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#start">2019</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" >Feb 2020</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" >Apr 2020</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" >Aug 2020</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content padding-20 bg-custom-white bx-wrapper">
+                                <div class="tab-pane fade show active" id="start">
+                                    <div class="tab-inner">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="img-sec mb-md-40">
+                                                    <img src="{%static "assets/images/about1.jpg"%}" class="full-width" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="content-box">
+                                                    <h4 class="text-custom-black fw-600">Collaborate With Team Members To Rise</h4>
+                                                    <p class="text-light-blue">I will very Thanks full to all</p>
+                                                    <p class="text-light-white">Each healthcare provider
+													is like a member of the team with a special role. Some team members
+													are doctors or technicians who help diagnose disease. Others are
+													experts who treat disease or care for patients' physical and
+													emotional needs.</p><p class="text-light-white">Good, reliable communication
+													between members is vital if a team is to function effectively. Dr Natalie Hayes, </p>
+                                                    <div class="list">
+                                                        <ul class="custom">
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Doctors</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Pharmisites</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lab-Technian</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Expert Team</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="{% url 'service'%}" class="btn-first btn-submit text-light-blue">Learn More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="setup">
+                                    <div class="tab-inner">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="img-sec mb-md-40">
+                                                    <img src="{static "assets/images/about2.jpg"%}" class="full-width" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="content-box">
+                                                    <h4 class="text-custom-black fw-600">Collaborate With Team Members To Rise</h4>
+                                                    <p class="text-light-blue">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    <p class="text-light-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                                    <p class="text-light-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                                    <div class="list">
+                                                        <ul class="custom">
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lorem Ipsum</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lorem Ipsum</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lorem Ipsum</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lorem Ipsum</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" class="btn-first btn-submit text-light-blue">Learn More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="medium">
+                                    <div class="tab-inner">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="img-sec mb-md-40">
+                                                    <img src="{%static "assets/images/about1.jpg"%}" class="full-width" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="content-box">
+                                                    <h4 class="text-custom-black fw-600">Collaborate With Team Members To Rise</h4>
+                                                    <p class="text-light-blue">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    <p class="text-light-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                                    <p class="text-light-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                                    <div class="list">
+                                                        <ul class="custom">
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lorem Ipsum</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lorem Ipsum</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lorem Ipsum</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lorem Ipsum</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" class="btn-first btn-submit text-light-blue">Learn More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="advance">
+                                    <div class="tab-inner">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="img-sec mb-md-40">
+                                                    <img src="{%static "assets/images/about2.jpg"%}" class="full-width" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="content-box">
+                                                    <h4 class="text-custom-black fw-600">Collaborate With Team Members To Rise</h4>
+                                                    <p class="text-light-blue">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    <p class="text-light-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                                    <p class="text-light-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                                    <div class="list">
+                                                        <ul class="custom">
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Doctors</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Pharmisites</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Lab-Technian</span>
+                                                            </li>
+                                                            <li class="fs-14 text-light-blue">
+                                                                <i class="fas fa-check"></i>
+                                                                <span class="text-light-white">Expert Teams</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="#" class="btn-first btn-submit text-light-blue">Learn More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About -->
+
+        <!-- Start Team -->
+        <section class="section-padding doctors-team bg-light-white style-2">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Team</h3>
+                        <img src="{%static "assets/images/title-icon.png"%}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 no-padding">
+                        <div class="doctors-slider">
+                            <div class="slide-item col-12">
+                                <div class="doctor-item">
+                                    <div class="doctor-img mb-xl-20">
+                                        <img src="{%static "assets/images/doctors/doctor1.jpg"%}" class="full-width" alt="image">
+                                    </div>
+                                    <div class="doctor-content">
+                                        <h6><a href="#" class="text-custom-black fw-700">Dr. Addison Smith</a></h6>
+                                        <p class="text-light-white">Cardiologists</p>
+                                        <ul class="custom">
+                                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item col-12">
+                                <div class="doctor-item">
+                                    <div class="doctor-img mb-xl-20">
+                                        <img src="{%static "assets/images/doctors/doctor2.jpg"%}" class="full-width" alt="image">
+                                    </div>
+                                    <div class="doctor-content">
+                                        <h6><a href="#" class="text-custom-black fw-700">Dr. Sarah Taylor</a></h6>
+                                        <p class="text-light-white">Nephrologists</p>
+                                        <ul class="custom">
+                                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item col-12">
+                                <div class="doctor-item">
+                                    <div class="doctor-img mb-xl-20">
+                                        <img src="{%static "assets/images/doctors/doctor3.jpg"%}" class="full-width" alt="image">
+                                    </div>
+                                    <div class="doctor-content">
+                                        <h6><a href="#" class="text-custom-black fw-700">Dr. Aiken Ward</a></h6>
+                                        <p class="text-light-white">Dermatologists</p>
+                                        <ul class="custom">
+                                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item col-12">
+                                <div class="doctor-item">
+                                    <div class="doctor-img mb-xl-20">
+                                        <img src="{%static "assets/images/doctors/doctor4.jpg"%}" class="full-width" alt="image">
+                                    </div>
+                                    <div class="doctor-content">
+                                        <h6><a href="#" class="text-custom-black fw-700">Babatunde Jon</a></h6>
+                                        <p class="text-light-white">Endocrinologists</p>
+                                        <ul class="custom">
+                                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item col-12">
+                                <div class="doctor-item">
+                                    <div class="doctor-img mb-xl-20">
+                                        <img src="{%static "assets/images/doctors/doctor5.jpg"%}" class="full-width" alt="image">
+                                    </div>
+                                    <div class="doctor-content">
+                                        <h6><a href="#" class="text-custom-black fw-700">Eachann Jhon</a></h6>
+                                        <p class="text-light-white">Gastroenterologists</p>
+                                        <ul class="custom">
+                                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Team -->
+
+        <!-- Start Newsletter -->
+
+        <!-- End Newsletter -->
+        <!-- Start Footer -->
+       <footer class="section-padding bg-custom-white footer-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-box mb-md-40">
+
+                            <div class="logo">
+
+                                <a href="#">
+
+                                    <h2>AMIS</h2>
+                                </a>
+
+                            </div>
+
+                            <p class="text-custom-black no-margin">
+
+                               Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to emulate human cognition
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-md-40">
+
+                            <h5 class="text-custom-black fw-600">Working Time</h5>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Mon - Wed: <span class="text-custom-black fw-600">9:00 AM - 7:00 PM</span><br>
+
+                                Thursday: <span class="text-custom-black fw-600">9:00 AM - 6:30 PM</span><br>
+
+                                Friday: <span class="text-custom-black fw-600">9:00 AM - 6:00 PM</span><br>
+
+                                Sat - Sun: <span class="text-custom-black fw-600">Closed</span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-sm-40">
+
+                            <h5 class="text-custom-black fw-600">Emergency Cases</h5>
+
+                            <h4 class="text-light-blue fw-600">1-800-123-4567</h4>
+
+                            <p class="no-margin text-custom-black fs-14">when you are faced with an emergency or injury, you will know what to do. Your confidence</p>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info">
+
+                            <h5 class="text-custom-black fw-600">Our Location</h5>
+
+                            <p class="text-custom-black fs-14">O46F SDC Gorakhpur,<br>Uttar Pradesh</p>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Email: <a href="#" class="text-custom-black fw-600">info@amis.com</a><br>
+
+                                Phone: <a href="#" class="text-custom-black fw-600">+(347) 123 456 7890</a>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- End Footer -->
+
+        <!-- Start Copyright -->
+
+        <div class="copyright-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 align-self-center">
+
+                        <p class="text-custom-black">
+
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="social-media mb-xl-20">
+
+                            <ul class="custom">
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-facebook-f"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-twitter"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-linkedin"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-youtube"></i></a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- End Copyright -->
+
+        <!-- back to top -->
+
+        <div id="back-top" class="back-top">
+
+          <a href="#top"><i class="flaticon-up-arrow"></i></a>
+
+        </div>
+
+    </div>
+
+    <!-- End Main Body -->
+
+       <!-- Builder Pannel start-->
+
+
+
+    <!-- Builder Pannel end-->
+
+
+
+    <!-- Theme skins -->
+
+
+  <!-- Theme skins -->
+
+    <!-- Place all Scripts Here -->
+
+    <!-- jQuery -->
+
+    <script src="{%static "assets/js/jquery.min.js"%}"></script>
+
+    <!-- Popper -->
+
+    <script src="{%static "assets/js/popper.min.js"%}"></script>
+
+    <!-- Bootstrap -->
+
+    <script src="{%static "assets/js/bootstrap.min.js"%}"></script>
+
+    <!-- Range Slider -->
+
+    <script src="{%static "assets/js/ion.rangeSlider.min.js"%}"></script>
+
+    <!-- Slick Slider -->
+
+    <script src="{%static "assets/js/slick.min.js"%}"></script>
+
+    <!-- Datepicker -->
+
+    <script src="{%static "assets/js/datepicker.js"%}"></script>
+
+    <script src="{%static "assets/js/datepicker.en.js"%}"></script>
+
+    <!-- Nice Select -->
+
+    <script src="{%static "assets/js/jquery.nice-select.js"%}"></script>
+
+    <!-- Nice Select -->
+
+    <script src="{%static "assets/js/particles.js"%}"></script>
+
+    <!-- Magnific Popup -->
+
+    <script src="{%static "assets/js/jquery.magnific-popup.min.js"%}"></script>
+
+    <!-- Google Map -->
+
+    <script src="../../../../external.html?link=https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+
+    <!-- Isotope Gallery -->
+
+    <script src="{%static "assets/js/isotope.pkgd.min.js"%}"></script>
+
+    <!-- Custom Js -->
+
+    <script src="{%static "assets/js/custom.js"%}"></script>
+
+    <!-- /Place all Scripts Here -->
+
+
+{% endblock %}

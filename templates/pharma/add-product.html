@@ -1,0 +1,310 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from doccure-html.dreamguystech.com/template/pharmacy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2020 11:51:13 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>Pharmacy Dashboard</title>
+
+		<!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{%static "assets/assets/images/favicon.png"%}">
+
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{%static "assets/assets/css/bootstrap.min.css"%}">
+
+		<!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="{%static "assets/assets/css/font-awesome.min.css"%}">
+
+		<!-- Feathericon CSS -->
+        <link rel="stylesheet" href="{%static "assets/assets/css/feathericon.min.css"%}">
+
+		<link rel="stylesheet" href="{%static "assets/assets/plugins/morris/morris.css"%}">
+
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="{%static "assets/assets/css/style.css"%}">
+
+		<!--[if lt IE 9]>
+			<script src="{%static "assets/assets/js/html5shiv.min.js"%}"></script>
+			<script src="{%static "assets/assets/js/respond.min.js"%}"></script>
+		<![endif]-->
+    </head>
+    <body>
+	
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">
+		
+			<!-- Header -->
+            <div class="header">
+			
+				<!-- Logo -->
+                <div class="header-left">
+
+                </div>
+				<!-- /Logo -->
+				
+
+				
+				<div class="top-nav-search">
+
+				</div>
+				
+				<!-- Mobile Menu Toggle -->
+				<!-- /Mobile Menu Toggle -->
+				
+				<!-- Header Right Menu -->
+				<ul class="nav user-menu">
+
+					<!-- Notifications -->
+					<li class="nav-item dropdown noti-dropdown">
+
+						<div class="dropdown-menu notifications">
+
+
+						</div>
+					</li>
+					<!-- /Notifications -->
+					
+					<!-- User Menu -->
+					<li class="nav-item dropdown has-arrow">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<span class="user-img"><img class="rounded-circle" src="{%static "assets/assets/img/profiles/avatar-01.jpg"%}" width="31" alt="Ryan Taylor"></span>
+						</a>
+						<div class="dropdown-menu">
+							<div class="user-header">
+								<div class="avatar avatar-sm">
+									<img src="{%static "assets/assets/img/profiles/avatar-01.jpg"%}" alt="User Image" class="avatar-img rounded-circle">
+								</div>
+								<div class="user-text">
+									<h6>Ryan Taylor</h6>
+									<p class="text-muted mb-0">Administrator</p>
+								</div>
+							</div>
+							<a class="dropdown-item" href="profile.html">My Profile</a>
+							<a class="dropdown-item" href="settings.html">Settings</a>
+							<a class="dropdown-item" href="login.html">Logout</a>
+						</div>
+					</li>
+					<!-- /User Menu -->
+					
+				</ul>
+				<!-- /Header Right Menu -->
+				
+            </div>
+			<!-- /Header -->
+			
+			<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li class="menu-title"> 
+								<span>Main</span>
+							</li>
+							<li class="active">
+								<a href="{% url 'pharmacistDashboard'%}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+							</li>
+							<li class="submenu">
+								<a href="#"><i class="fe fe-document"></i> <span> Products</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{% url 'products'%}">Products</a></li>
+									<li><a href="{% url 'addproduct'%}">Add Product</a></li>
+									<li><a href="{% url 'outstock'%}">Out-Stock</a></li>
+
+								</ul>
+							</li>
+							<li>
+								<a href="{% url 'cat'%}"><i class="fe fe-layout"></i> <span>Categories</span></a>
+							</li>
+							<li class="submenu">
+								<a href="#"><i class="fe fe-star-o"></i> <span> Purchase</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{% url 'purchase'%}">Purchase</a></li>
+									<li><a href="{% url 'order'%}">Orders</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+
+							</li>
+							<li><a href="{% url 'transaction'%}"><i class="fe fe-table"></i> <span>Transaction</span></a></li>
+							<li class="submenu">
+								<a href="#"><i class="fe fe-document"></i> <span> Reports</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{% url 'report'%}">Invoice Reports</a></li>
+								</ul>
+							</li>
+							<li class="menu-title">
+								<span>Pages</span>
+							</li>
+							<li>
+								<a href="{% url 'dawaprofile'%}"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
+							</li>
+
+
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->
+			
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row">
+							<div class="col-sm-12">
+								<h3 class="page-title">Add Product</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="{% url 'pharmacistDashboard'%}">Dashboard</a></li>
+									<li class="breadcrumb-item active">Add Product</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card">
+								<div class="card-body custom-edit-service">
+									
+							
+								<!-- Add Medicine -->
+								<form method="post" enctype="multipart/form-data" autocomplete="off" id="update_service" action="https://doccure-html.dreamguystech.com/template/pharmacy/medicine.html">
+									<input type="hidden" name="csrf_token_name" value="0146f123a4c7ae94253b39bca6bd5a5e">
+
+									<div class="service-fields mb-3">
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="form-group">
+													<label>Product Name<span class="text-danger">*</span></label>
+													<input type="hidden" name="brand_name" id="brand_name" value="18">
+													<input class="form-control" type="text" name="brand_name" id="brand_name" value="" required="">
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="form-group">
+													<label>Category <span class="text-danger">*</span></label>
+													<select class="form-control select" name="category" required=""> 
+														<option value="1">Phytopathology</option>
+														<option value="2" selected="selected">Family Care</option>
+														<option value="3">Cancer</option>
+														<option value="4">Fitness & Wellness</option>
+														<option value="5">Hair care</option>
+														<option value="6">Skin care</option>
+														<option value="7">Neoplasms</option>
+														<option value="8">Women's Care</option>
+														<option value="9">Sleep disorders</option>
+														<option value="10">Baby care</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="service-fields mb-3">
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="form-group">
+													<label>Price<span class="text-danger">*</span></label>
+													<input type="hidden" name="Price" id="Price" value="18">
+													<input class="form-control" type="text" name="Price" id="Price" value="$" required="">
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="form-group">
+													<label>Quantity<span class="text-danger">*</span></label>
+													<input type="hidden" name="quantity" id="quantity" value="18">
+													<input class="form-control" type="text" name="quantity" id="quantity" value="" required="">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="service-fields mb-3">
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="form-group">
+													<label>Discount<span class="text-danger">*</span></label>
+													<input type="hidden" name="discount" id="discount" value="18">
+													<input class="form-control" type="text" name="discount" id="discount" value="" required="">
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="service-fields mb-3">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="form-group">
+													<label>Descriptions <span class="text-danger">*</span></label>
+													<textarea id="about" class="form-control service-desc" name="about"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="service-fields mb-3">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="service-upload">
+													<i class="fas fa-cloud-upload-alt"></i>
+													<span>Upload Product Images *</span>
+													<input type="file" name="images[]" id="images" multiple="" accept="image/jpeg, image/png, image/gif,">
+												
+												</div>	
+												<div id="uploadPreview">
+													<ul class="upload-wrap">
+														<li>
+															<div class=" upload-images">
+																<img alt="Blog Image" src="{%static "assets/assets/img/product/product1.jpg"%}">
+															</div>
+														</li>
+													</ul>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="submit-section">
+										<button class="btn btn-primary submit-btn" type="submit" name="form_submit" value="submit">Submit</button>
+									</div>
+								</form>
+								<!-- /Add Medicine -->
+
+
+								</div>
+							</div>
+						</div>			
+					</div>
+					
+				</div>			
+			</div>
+			<!-- /Page Wrapper -->
+		
+        </div>
+		<!-- /Main Wrapper -->
+		
+		<!-- jQuery -->
+         <script src="{%static "assets/assets/js/jquery-3.2.1.min.js"%}"></script>
+
+		<!-- Bootstrap Core JS -->
+        <script src="{%static "assets/assets/js/popper.min.js"%}"></script>
+        <script src="{%static "assets/assets/js/bootstrap.min.js"%}"></script>
+
+		<!-- Slimscroll JS -->
+        <script src="{%static "assets/assets/plugins/slimscroll/jquery.slimscroll.min.js"%}"></script>
+
+		<script src="{%static "assets/assets/plugins/raphael/raphael.min.js"%}"></script>
+		<script src="{%static "assets/assets/plugins/morris/morris.min.js"%}"></script>
+		<script src="{%static "assets/assets/js/chart.morris.js"%}"></script>
+
+		<!-- Custom JS -->
+		<script  src="{%static "assets/assets/js/script.js"%}"></script>
+    </body>
+
+<!-- Mirrored from doccure-html.dreamguystech.com/template/pharmacy/add-product.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2020 11:52:35 GMT -->
+</html>

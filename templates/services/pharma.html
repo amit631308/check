@@ -1,0 +1,222 @@
+<!doctype html>
+{% extends "base.html"%}
+{% block title%}
+AMIS|Pharma Stores
+{% endblock %}
+
+
+{% block body%}
+{%load static%}
+<div class="sub-header p-relative">
+            <div class="overlay overlay-bg-black"></div>
+            <div class="pattern"></div>
+            <div class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="sub-header-content p-relative">
+                                <h1 class="text-custom-white lh-default fw-600">Service Detail</h1>
+                                <ul class="custom">
+                                    <li>
+                                        <a href="{% url 'patientDashboard'%}" class="text-custom-white">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'service'%}" class="text-custom-white">Services</a>
+                                    </li>
+                                    <li class="text-custom-white active">Pharmancy Stores</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="container">
+<div class="row">
+  <div class="col-sm-4" style="margin-top:10px;"><input class="form-control" type="text"id="myInputed" onkeyup="myFunction()" placeholder="Pin Code" aria-label="Search" title="Type Code">
+  </div>
+  <div class="col-sm-4"style="margin-top:10px;"><a href="{% url 'shop'%}" class="btn btn-primary ">Your Pharmacy Store are Show Below</a></div>
+  <div class="col-sm-4"style="margin-top:10px;"><input class="form-control" type="text"id="myInputing" onkeyup="myFunction()" placeholder="Store Name" aria-label="Search" title="Type in a name">
+</div>
+</div>
+
+</div>
+<div class="container" style="margin-top:15px;">
+<table id="myTable">
+  <tr class="header">
+    <th style="width:20%;"> PIN-CODE</th>
+    <th style="width:20%;">Shope-Name</th>
+
+    <th style="width:20%;">Action</th>
+
+
+  </tr>
+  <tr>
+    <td>273001</td>
+    <td>Germany</td>
+      <td><a href="{% url 'firstpharmastore'%}"> <i class="fas fa-cloud-upload-alt"></i></a></td>
+  </tr>
+  <tr>
+
+    <td>273001</td>
+    <td>Germany</td>
+      <td><a href="{% url 'firstpharmastore'%}"> <i class="fas fa-cloud-upload-alt"></i></a></td>
+  </tr>
+  <tr>
+
+    <td>273006</td>
+    <td>rmany</td>
+      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
+  </tr>
+  <tr>
+
+    <td>273009</td>
+    <td>Gny</td>
+      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
+  </tr>
+  <tr>
+
+    <td>273007</td>
+    <td>many</td>
+      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
+  </tr>
+  <tr>
+
+    <td>273004</td>
+    <td>ermany</td>
+      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
+  </tr>
+  <tr>
+
+    <td>273003</td>
+    <td>Germany</td>
+      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
+  </tr>
+  <tr>
+
+    <td>273008</td>
+    <td>Germany</td>
+      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
+  </tr>
+</table>
+</div>
+
+
+<div class="container">
+<hr class="my-4" style="height:2px;border-width:0;color:gray;background-color:gray">
+  <div>
+        <footer class="section-padding bg-custom-white footer-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-box mb-md-40">
+
+                            <div class="logo">
+
+                                <a href="#">
+
+                                    <h2>AMIS</h2>
+                                </a>
+
+                            </div>
+
+                            <p class="text-custom-black no-margin">
+
+                               Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to emulate human cognition
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-md-40">
+
+                            <h5 class="text-custom-black fw-600">Working Time</h5>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Mon - Wed: <span class="text-custom-black fw-600">9:00 AM - 7:00 PM</span><br>
+
+                                Thursday: <span class="text-custom-black fw-600">9:00 AM - 6:30 PM</span><br>
+
+                                Friday: <span class="text-custom-black fw-600">9:00 AM - 6:00 PM</span><br>
+
+                                Sat - Sun: <span class="text-custom-black fw-600">Closed</span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-sm-40">
+
+                            <h5 class="text-custom-black fw-600">Emergency Cases</h5>
+
+                            <h4 class="text-light-blue fw-600">1-800-123-4567</h4>
+
+                            <p class="no-margin text-custom-black fs-14">when you are faced with an emergency or injury, you will know what to do. Your confidence</p>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info">
+
+                            <h5 class="text-custom-black fw-600">Our Location</h5>
+
+                            <p class="text-custom-black fs-14">O46F SDC Gorakhpur,<br>Uttar Pradesh</p>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Email: <a href="#" class="text-custom-black fw-600">info@amis.com</a><br>
+
+                                Phone: <a href="#" class="text-custom-black fw-600">+(347) 123 456 7890</a>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInputed");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
+
+
+{% endblock %}

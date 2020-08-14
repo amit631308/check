@@ -1,0 +1,354 @@
+<!doctype html>
+{% extends "base.html"%}
+{% block title%}
+AMIS|Lab
+{% endblock %}
+
+
+{% block body%}
+{%load static%}
+<div class="sub-header p-relative">
+    <div class="overlay overlay-bg-black"></div>
+    <div class="pattern"></div>
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="sub-header-content p-relative">
+                        <h1 class="text-custom-white lh-default fw-600">Online Lab</h1>
+                        <ul class="custom">
+                            <li>
+                                <a href="{% url 'patientDashboard'%}" class="text-custom-white">Home</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'service'%}" class="text-custom-white">Services</a>
+                            </li>
+                            <li class="text-custom-white active">Onlline-Lab</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="section-padding bg-light-white our-articles">
+            <div class="container">
+                <div class="row">
+                    <aside class="col-lg-4">
+                        <div class="sidebar_wrap mb-md-80">
+                            <div class="sidebar">
+                                <div class="sidebar_widgets mb-xl-30">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">Search</h5>
+                                    </div>
+                                    <form>
+                                        <div class="form-group mb-0">
+                                            <div class="search p-relative">
+                                                <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="sidebar_widgets mb-xl-30">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">Tops Labs:</h5>
+                                    </div>
+                                    <ul class="categories custom">
+                                        <li>
+                                            <a href="{% url 'tech'%}" class="text-custom-black fs-14">All <span class="text-light-white">(19)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-custom-black fs-14">Calendula Pills <span class="text-light-white">(1)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-custom-black fs-14">Suger Checker <span class="text-light-white">(3)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-custom-black fs-14">Borago Officinalis <span class="text-light-white">(4)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-custom-black fs-14">Calendula Pills <span class="text-light-white">(2)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-custom-black fs-14">B P Machine <span class="text-light-white">(1)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-custom-black fs-14">Syringe <span class="text-light-white">(8)</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar_widgets mb-xl-30">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">Our Rating</h5>
+                                    </div>
+                                    <div id="shop-range-price" class="mt-4">
+
+                                    </div>
+                                   <div class="rating">
+                                                            <i class="fa fa-star cheked"></i>
+                                                            <i class="fa fa-star cheked"></i>
+                                                            <i class="fa fa-star cheked"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+
+                                                        </div>
+                                </div>
+                                <div class="sidebar_widgets mb-xl-30">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">Top Products</h5>
+                                    </div>
+                                    <ul class="custom popular_post">
+                                        <li>
+                                            <div class="post">
+                                                <div class="post-wrapper">
+                                                    <div class="popular_post_img animate-img">
+                                                        <a href="blog-single.html">
+                                                            <img src="{%static "assets/images/blog/sblog1.jpg"%}" class="img-fluid image-fit" alt="#">
+                                                        </a>
+                                                    </div>
+                                                    <div class="popular_post_title">
+                                                        <div class="post-date">
+                                                            <p class="text-light-white no-margin">Dr Path Lab:</p>
+                                                        </div>
+                                                        <h6><a href="blog-single.html" class="text-custom-black fs-16 fw-600">
+                                                                <del class="text-gray"></del>
+                                                            </a></h6>
+                                                        <div class="rating">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="post">
+                                                <div class="post-wrapper">
+                                                    <div class="popular_post_img animate-img">
+                                                        <a href="blog-single.html">
+                                                            <img src="{%static "assets/images/blog/sblog2.jpg"%}" class="img-fluid image-fit" alt="#">
+                                                        </a>
+                                                    </div>
+                                                    <div class="popular_post_title">
+                                                        <div class="post-date">
+                                                            <p class="text-light-white no-margin">Kashyap Lab:</p>
+                                                        </div>
+                                                        <h6><a href="blog-single.html" class="text-custom-black fs-16 fw-600">
+                                                                <del class="text-gray"></del>
+                                                            </a></h6>
+                                                        <div class="rating">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="post">
+                                                <div class="post-wrapper">
+                                                    <div class="popular_post_img animate-img">
+                                                        <a href="blog-single.html">
+                                                            <img src="{%static "assets/images/blog/sblog3.jpg"%}" class="img-fluid image-fit" alt="#">
+                                                        </a>
+                                                    </div>
+                                                    <div class="popular_post_title">
+                                                        <div class="post-date">
+                                                            <p class="text-light-white no-margin">Base Lab:</p>
+                                                        </div>
+                                                        <h6><a href="blog-single.html" class="text-custom-black fs-16 fw-600">
+                                                                <del class="text-gray"></del>
+                                                            </a></h6>
+                                                        <div class="rating">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                    </aside>
+ <div class="col-lg-8">
+<div class="container">
+    <h1 class="text-warning">Laboratory</abbr></h1>
+  <p class="text-warning">Type something in the input field to search the table for Labs:</p>
+
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="text-danger">Lab Name:</th>
+        <th class="text-danger">Lab ID:</th>
+        <th class="text-danger">View That Lab:</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>John</td>
+        <td>1234</td>
+        <td><a href="{% url 'formservice'%}"><i class="far fa-eye"></i></a></td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>567</td>
+        <td><a href="{% url 'formservice'%}"><i class="far fa-eye"></i></a></td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>8910</td>
+        <td><a href="{% url 'formservice'%}"> <i class="far fa-eye"></i></a></td>
+      </tr>
+      <tr>
+        <td>Anja</td>
+        <td>1298</td>
+        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
+      </tr>
+    <tr>
+        <td>John</td>
+        <td>1234</td>
+        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>567</td>
+        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>8910</td>
+        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
+      </tr>
+      <tr>
+        <td>Anja</td>
+        <td>1298</td>
+        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+ </div>
+</section>
+<!-- End Subheader -->
+
+        <footer class="section-padding bg-custom-white footer-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-box mb-md-40">
+
+                            <div class="logo">
+
+                                <a href="#">
+
+                                    <h2>AMIS</h2>
+                                </a>
+
+                            </div>
+
+                            <p class="text-custom-black no-margin">
+
+                                Artificial intelligence (AI) in healthcare is the use of complex algorithms and software
+                                to emulate human cognition
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-md-40">
+
+                            <h5 class="text-custom-black fw-600">Working Time</h5>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Mon - Wed: <span class="text-custom-black fw-600">9:00 AM - 7:00 PM</span><br>
+
+                                Thursday: <span class="text-custom-black fw-600">9:00 AM - 6:30 PM</span><br>
+
+                                Friday: <span class="text-custom-black fw-600">9:00 AM - 6:00 PM</span><br>
+
+                                Sat - Sun: <span class="text-custom-black fw-600">Closed</span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-sm-40">
+
+                            <h5 class="text-custom-black fw-600">Emergency Cases</h5>
+
+                            <h4 class="text-light-blue fw-600">1-800-123-4567</h4>
+
+                            <p class="no-margin text-custom-black fs-14">when you are faced with an emergency or injury,
+                                you will know what to do. Your confidence</p>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info">
+
+                            <h5 class="text-custom-black fw-600">Our Location</h5>
+
+                            <p class="text-custom-black fs-14">O46F SDC Gorakhpur,<br>Uttar Pradesh</p>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Email: <a href="#" class="text-custom-black fw-600">info@amis.com</a><br>
+
+                                Phone: <a href="#" class="text-custom-black fw-600">+(347) 123 456 7890</a>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+        <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+        {% endblock %}

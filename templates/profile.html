@@ -1,0 +1,439 @@
+<!doctype html>
+{% extends "base.html"%}
+{% block title%}
+AMIS|Profile
+{% endblock %}
+
+
+
+{% block body%}
+{%load static%}
+<body class="animated-banner">
+
+    <!-- Start Main Body -->
+
+    <div class="main-body">
+
+        
+
+            
+		<div class="main-content">
+    
+    <!-- Header -->
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+      <!-- Mask -->
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <!-- Header container -->
+      <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="display-2 text-white">Hello {{data.username|title}}</h1>
+            <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
+            <a href="#!" class="btn btn-info">Edit profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--7">
+      <div class="row">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+          <div class="card card-profile shadow">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <a href="#">
+                    <img src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg" class="rounded-circle">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+              <div class="d-flex justify-content-between">
+
+              </div>
+            </div>
+            <div class="card-body pt-0 pt-md-4">
+              <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3>
+                  {{user.first_name}} {{user.last_name}}<span class="font-weight-light">,{{data.age}}</span>
+                </h3>
+                <div class="h5 font-weight-300">
+                  <i class="ni location_pin mr-2"></i>{{data.address}}
+                </div>
+                <div class="h5 mt-4">
+                  <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
+                </div>
+                <div>
+                  <i class="ni education_hat mr-2"></i>University of Computer Science
+                </div>
+                <hr class="my-4">
+
+				<a href="{% url 'checkuplist'%}"> <span class="badge badge-success">All Check-up </span></a>
+
+				<a href="{% url 'appointmentlist'%}"> <span class="badge badge-warning">Appointment </span></a>
+
+				<a href="{% url 'paymentstatus'%}"> <span class="badge badge-info">Payments </span></a>
+				  <hr class="my-4">
+				  <a href="{% url 'labreport'%}"> <span class="badge badge-primary">Lab Reports </span></a>
+
+				<a href="{% url 'notification'%}"> <span class="badge badge-info">Notification </span></a>
+
+				<a href="{% url 'notification'%}"> <span class="badge badge-danger">Alert </span></a>
+				<hr class="my-4">
+
+              </div>
+			  <center><span class="badge badge-warning"><h4>Latest News</h4> </span></center>
+            </div>
+			<marquee direction="up" behavior="alternate" scrollamount="1" style="height:400px"><p class="text-info">Maecenas sed diam
+                <br>eget risus varius blandit sit amet non magna.<br><a href="{% url 'covid'%}"> covid-19 precauations</a></p></marquee>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-xl-8 order-xl-1">
+          <div class="card bg-secondary shadow">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">My account</h3>
+                </div>
+                <div class="col-4 text-right">
+                  <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <form action="{%url 'profile'%}" method="POST">
+                {%csrf_token%}
+                <h6 class="heading-small text-white  mb-4">User information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-username">Username</label>
+                        <input type="text" id="input-username" class="form-control form-control-alternative" name="uname" placeholder="Username" value="{{data.username}}" required>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Email address</label>
+                        <input type="email" id="input-email" class="form-control form-control-alternative" name="email" value="{{user.email}}" placeholder="jesse@example.com" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">First name</label>
+                        <input type="text" id="input-first-name" class="form-control form-control-alternative" name="fname" placeholder="First name" value="{{user.first_name}}"required>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Last name</label>
+                        <input type="text" id="input-last-name" class="form-control form-control-alternative" name="lname" placeholder="Last name" value="{{user.last_name}}"required>
+                      </div>
+                    </div>
+                  </div>
+
+
+				 <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">Age</label>
+                        <input type="text" id="input-first-name" class="form-control form-control-alternative" name="age" placeholder="First name" value="{{data.age}}"required>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Blood Group</label>
+                        <input type="text" id="input-last-name" class="form-control form-control-alternative" name="bloodgroup" placeholder="Last name" value="{{data.bloodgroup}}"required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <!-- Address -->
+                <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">Address</label>
+                        <input id="input-address" class="form-control form-control-alternative" name="address" placeholder="Home Address" value="{{data.address}}" type="text"required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-city">City</label>
+                        <input type="text" id="input-city" class="form-control form-control-alternative" name="city" placeholder="City" value="{{data.city}}"required>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-country">Country</label>
+                        <input type="text" id="input-country" class="form-control form-control-alternative" name="country" placeholder="Country" value="{{data.country}}"required>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-country">Postal code</label>
+                        <input type="number" id="input-postal-code" class="form-control form-control-alternative" name="postalcode" value="{{data.postal}}" placeholder="Enter Zip Code"required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <!-- Description -->
+                <h6 class="heading-small text-muted mb-4">About me</h6>
+                <div class="pl-lg-4">
+                  <div class="form-group focused">
+                    <label>About Me</label>
+                    <textarea rows="4" class="form-control form-control-alternative" name="about" placeholder="Address" required>{{data.about}}</textarea>
+                  </div>
+                </div>
+                <div class="text-center">
+                <button type="submit" class="btn-first btn-submit text-dark fw-600">Save Detail</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Start Footer -->
+       <footer class="section-padding bg-custom-white footer-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-box mb-md-40">
+
+                            <div class="logo">
+
+                                <a href="#">
+
+                                    <h2>AMIS</h2>
+                                </a>
+
+                            </div>
+
+                            <p class="text-custom-black no-margin">
+
+                               Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to emulate human cognition
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-md-40">
+
+                            <h5 class="text-custom-black fw-600">Working Time</h5>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Mon - Wed: <span class="text-custom-black fw-600">9:00 AM - 7:00 PM</span><br>
+
+                                Thursday: <span class="text-custom-black fw-600">9:00 AM - 6:30 PM</span><br>
+
+                                Friday: <span class="text-custom-black fw-600">9:00 AM - 6:00 PM</span><br>
+
+                                Sat - Sun: <span class="text-custom-black fw-600">Closed</span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-sm-40">
+
+                            <h5 class="text-custom-black fw-600">Emergency Cases</h5>
+
+                            <h4 class="text-light-blue fw-600">1-800-123-4567</h4>
+
+                            <p class="no-margin text-custom-black fs-14">when you are faced with an emergency or injury, you will know what to do. Your confidence</p>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info">
+
+                            <h5 class="text-custom-black fw-600">Our Location</h5>
+
+                            <p class="text-custom-black fs-14">O46F SDC Gorakhpur,<br>Uttar Pradesh</p>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Email: <a href="#" class="text-custom-black fw-600">info@amis.com</a><br>
+
+                                Phone: <a href="#" class="text-custom-black fw-600">+(347) 123 456 7890</a>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- End Footer -->
+
+        <!-- Start Copyright -->
+
+        <div class="copyright-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 align-self-center">
+
+                        <p class="text-custom-black">
+
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="social-media mb-xl-20">
+
+                            <ul class="custom">
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-facebook-f"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-twitter"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-linkedin"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-youtube"></i></a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- End Copyright -->
+
+        <!-- back to top -->
+
+        <div id="back-top" class="back-top">
+
+          <a href="#top"><i class="flaticon-up-arrow"></i></a>
+
+        </div>
+
+    </div>
+
+    <!-- End Main Body -->
+
+      
+
+
+
+    {% if status %}
+    <script>
+        alert("{{status}}");
+        window.location = "/profile/"
+    </script>
+    {%endif%}
+
+    <!-- Place all Scripts Here -->
+
+    <!-- jQuery -->
+
+    <script src="{%static "assets/js/jquery.min.js"%}"></script>
+
+    <!-- Popper -->
+
+    <script src="{%static "assets/js/popper.min.js"%}"></script>
+
+    <!-- Bootstrap -->
+
+    <script src="{%static "assets/js/bootstrap.min.js"%}"></script>
+
+    <!-- Range Slider -->
+
+    <script src="{%static "assets/js/ion.rangeSlider.min.js"%}"></script>
+
+    <!-- Slick Slider -->
+
+    <script src="{%static "assets/js/slick.min.js"%}"></script>
+
+    <!-- Datepicker -->
+
+    <script src="{%static "assets/js/datepicker.js"%}"></script>
+
+    <script src="{%static "assets/js/datepicker.en.js"%}"></script>
+
+    <!-- Nice Select -->
+
+    <script src="{%static "assets/js/jquery.nice-select.js"%}"></script>
+
+    <!-- Nice Select -->
+
+    <script src="{%static "assets/js/particles.js"%}"></script>
+
+    <!-- Magnific Popup -->
+
+    <script src="{%static "assets/js/jquery.magnific-popup.min.js"%}"></script>
+
+    <!-- Google Map -->
+
+    <script src="../../../../external.html?link=https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+
+    <!-- Isotope Gallery -->
+
+    <script src="{%static "assets/js/isotope.pkgd.min.js"%}"></script>
+
+    <!-- Custom Js -->
+
+    <script src="{%static "assets/js/custom.js"%}"></script>
+{% endblock %}
+
+

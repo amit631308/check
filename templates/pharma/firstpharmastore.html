@@ -1,0 +1,682 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from doccure-html.dreamguystech.com/template/product-all.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2020 11:50:38 GMT -->
+<head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<title>Pharma|stores</title>
+
+		<!-- Favicons -->
+		<link type="image/x-icon" href="{%static "assets/images/favicon.png"%}" rel="icon">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{%static "assets/css/bootstrap.min.css"%}">
+
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="{%static "assets/plugins/fontawesome/css/fontawesome.min.css"%}">
+		<link rel="stylesheet" href="{%static "assets/plugins/fontawesome/css/all.min.css"%}">
+
+		<!-- Datetimepicker CSS -->
+		<link rel="stylesheet" href="{%static "assets/css/bootstrap-datetimepicker.min.css"%}">
+
+		<!-- Select2 CSS -->
+		<link rel="stylesheet" href="{%static "assets/plugins/select2/css/select2.min.css"%}">
+
+		<!-- Fancybox CSS -->
+		<link rel="stylesheet" href="{%static "assets/plugins/fancybox/jquery.fancybox.min.css"%}">
+
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="{%static "assets/css/docstyle.css"%}">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="{%static "assets/js/html5shiv.min.js"%}"></script>
+			<script src="{%static "assets/js/respond.min.js"%}"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- Header -->
+			<!-- /Header -->
+
+			<div class="breadcrumb-bar">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="{% url 'firstpharmastore'%}">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">AMIS|Stores</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">Pain Relif	<span class="text-small text-white ml-2"> <b>70 Products</b></span></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		  	<!-- Page Content -->
+			<div class="content">
+				<div class="container-fluid">
+
+					<div class="row">
+						<div class="col-md-5 col-lg-3 col-xl-3 theiaStickySidebar">
+
+							<!-- Search Filter -->
+							<div class="card search-filter">
+								<div class="card-header">
+									<h4 class="card-title mb-0">Filter</h4>
+								</div>
+								<div class="card-body">
+								<!-- <div class="filter-widget">
+									<div class="cal-icon">
+										<input type="text" class="form-control datetimepicker" placeholder="Select Date">
+									</div>
+								</div> -->
+								<div class="filter-widget">
+									<h4>Categories</h4>
+									<input class="form-control" id="myInput" type="text" placeholder="Search..">
+								</div>
+									<div class="btn-search">
+										<button type="button" class="btn btn-block">Search</button>
+									</div>
+								</div>
+							</div>
+							<!-- /Search Filter -->
+
+						</div>
+
+						<div class="col-md-7 col-lg-9 col-xl-9">
+
+							<div class="row align-items-center pb-3">
+								<div class="col-md-4 col-12 d-md-block d-none custom-short-by">
+									<h3 class="title pharmacy-title">Amit Medical Store</h3>
+									<p class="doc-location mb-2 text-ellipse pharmacy-location"><i class="fas fa-map-marker-alt mr-1"></i> 96 Red Hawk Road Cyrus, MN 56323 </p>
+
+								</div>
+								<div class="col-md-8 col-12 d-md-block d-none custom-short-by">
+									<div class="sort-by pb-3">
+										<span class="sort-title">Sort by</span>
+										<span class="sortby-fliter">
+											<select class="select">
+												<option>Select</option>
+												<option class="sorting">Rating</option>
+												<option class="sorting">Popular</option>
+												<option class="sorting">Latest</option>
+												<option class="sorting">Free</option>
+											</select>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable" >
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Benzaxapine Croplex</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$19.00</span>
+													<span class="price-strike">$45.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product13.jpg"%}"">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable" >
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Rapalac Neuronium</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$16.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                             	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable" >
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Ombinazol Bonibamol</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$22.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                             	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product3.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Dantotate Dantodazole</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$10.00</span>
+													<span class="price-strike">$12.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product3.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Acetrace Amionel</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$7.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product3.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Ergorinex Caffeigestin</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$15.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                           	 	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product3.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Alispirox Aerorenone</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$26.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product10.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Lysofranil Dorzostin</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$10.00</span>
+													<span class="price-strike">$12.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product4.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Nitrolozin Zithrotropin</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$12.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product14.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Cordacriptine Mardipine</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$9.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product15.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Iconevist Ampyplex</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$16.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product6.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Alcafsteride Omebide</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$7.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product15.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Neubide Aborase</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$30.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product7.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">ITONE eye drops 10ml</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$50.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
+	                                <div class="profile-widget">
+										<div class="doc-img">
+											<a href="#" tabindex="-1">
+												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product8.jpg"%}">
+											</a>
+											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+												<i class="far fa-bookmark"></i>
+											</a>
+										</div>
+										<div class="pro-content" id="myTable">
+											<h3 class="title pb-4">
+												<a href="#" tabindex="-1">Antatriene Drospiletra</a>
+											</h3>
+											<div class="row align-items-center">
+												<div class="col-lg-6">
+													<span class="price">$10.00</span>
+													<span class="price-strike">$20.00</span>
+												</div>
+												<div class="col-lg-6 text-right">
+													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+                            	</div>
+
+                             </div>
+                             <div class="col-md-12 text-center">
+                             	<a href="#" class="btn book-btn1 mb-4">Load More</a>
+                         	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Footer -->
+			<footer class="footer">
+
+				<!-- Footer Top -->
+				<div class="footer-top">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-about">
+									<div class="footer-logo">
+									<h1>AMIS</h1>
+									</div>
+									<div class="footer-about-content">
+										<p>Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to emulate human cognition
+                            <div class="social-icon">
+											<ul>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- /Footer Widget -->
+
+							</div>
+
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<!-- /Footer Widget -->
+
+							</div>
+
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-menu">
+									<h2 class="footer-title">For Doctors</h2>
+									<ul>
+										<li><a href="appointments.html">Appointments</a></li>
+										<li><a href="chat.html">Chat</a></li>
+										<li><a href="login.html">Login</a></li>
+										<li><a href="doctor-register.html">Register</a></li>
+										<li><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
+									</ul>
+								</div>
+								<!-- /Footer Widget -->
+
+							</div>
+
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-contact">
+									<h2 class="footer-title">Contact Us</h2>
+									<div class="footer-contact-info">
+										<div class="footer-address">
+											<span><i class="fas fa-map-marker-alt"></i></span>
+											<p> 3556  Beech Street, San Francisco,<br> California, CA 94108 </p>
+										</div>
+										<p>
+											<i class="fas fa-phone-alt"></i>
+											+1 315 369 5943
+										</p>
+										<p class="mb-0">
+											<i class="fas fa-envelope"></i>
+											doccure@example.com
+										</p>
+									</div>
+								</div>
+								<!-- /Footer Widget -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- /Footer Top -->
+
+				<!-- Footer Bottom -->
+                <div class="footer-bottom">
+					<div class="container-fluid">
+
+						<!-- Copyright -->
+						<div class="copyright">
+							<div class="row">
+								<div class="col-md-6 col-lg-6">
+									<div class="copyright-text">
+										<p class="mb-0">&copy; 2020 Doccure. All rights reserved.</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-6">
+
+									<!-- Copyright Menu -->
+									<div class="copyright-menu">
+										<ul class="policy-menu">
+											<li><a href="term-condition.html">Terms and Conditions</a></li>
+											<li><a href="privacy-policy.html">Policy</a></li>
+										</ul>
+									</div>
+									<!-- /Copyright Menu -->
+
+								</div>
+							</div>
+						</div>
+						<!-- /Copyright -->
+
+					</div>
+				</div>
+				<!-- /Footer Bottom -->
+
+			</footer>
+
+			<!-- /Footer -->
+
+	   </div>
+	   <!-- /Main Wrapper -->
+
+		<!-- jQuery -->
+		<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="{%static "assets/js/jquery.min.js"%}"></script>
+
+		<!-- Bootstrap Core JS -->
+		<script src="{%static "assets/js/popper.min.js"%}"></script>
+		<script src="{%static "assets/js/bootstrap.min.js"%}"></script>
+
+		<!-- Sticky Sidebar JS -->
+        <script src="{%static "assets/plugins/theia-sticky-sidebar/ResizeSensor.js"%}"></script>
+        <script src="{%static "assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"%}"></script>
+
+		<!-- Select2 JS -->
+		<script src="{%static "assets/plugins/select2/js/select2.min.js"%}"></script>
+
+		<!-- Datetimepicker JS -->
+		<script src="{%static "assets/js/moment.min.js"%}"></script>
+		<script src="{%static "assets/js/bootstrap-datetimepicker.min.js"%}"></script>
+
+		<!-- Fancybox JS -->
+		<script src="{%static "assets/plugins/fancybox/jquery.fancybox.min.js"%}"></script>
+
+		<!-- Custom JS -->
+		<script src="{%static "assets/js/script.js"%}"></script>
+
+	</body>
+
+</html>

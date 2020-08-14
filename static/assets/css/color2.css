@@ -1,0 +1,650 @@
+/* ==========================================================================================
+  Theme Name: Rims
+  Author: Slidesigma
+  Support: info@slidesigma.com
+  Description: Rims | MULTIPURPOSE HTML5 Template
+  Version: 1.0
+========================================================================================== */
+
+
+/*-------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    1. Color black
+    2. Color light white
+    3. Color yellow
+    4. Bg black
+    5. Bg yellow
+    6. Bg light white
+    7. Border Yellow
+    8. Border black
+
+
+-------------------------------------------------------*/
+
+
+/* ....................................
+1. Color black
+.......................................*/
+.black,
+body,
+a,
+a:hover,
+.form-control,
+.btn-black:hover,
+.input-border,
+h1, h2, h3, h4, h5, h6,
+
+.text-custom-black,
+
+
+.audio-player #play-btn,
+.player-controls.scrubber .fa ,
+.next_prev,
+.btn-link,
+.latest_event_sermons h4 a,
+.latest_event_sermons h4 a,
+ .latest_event_sermons h6 a,
+ .post_detail .sermons_inside ul li a:hover,
+ blockquote p,
+ .psot_tags span,
+ .psot_share span,
+ .comment-author a,
+ .tl-shop-single,
+.tl-product-content h4,
+.login-page h4,
+.blog_info h5 a,
+.sermons_meta li,
+.sermons_inside ul li a:hover,
+.recent_post h6 a,
+.form-layout-1 .form-group label,
+.form-layout-1 .form-group .form-control,
+.text-dark-blue {
+    color: #2E4057;
+}
+
+
+
+
+.text-light-white{
+  color: #020202;
+}
+
+
+/* ....................................
+2. Color light white
+.......................................*/
+
+.light-white,
+.icon-bg-quote,
+.quote-right-light {
+    color: #f6f9f2;
+}
+
+
+/* ....................................
+3. Color yellow
+.......................................*/
+a:focus,
+blockquote h6,
+.text-custom-red,
+.main-navigation nav ul>li.menu-item:hover>a,
+.main-navigation nav ul>li.menu-item.active>a,
+a:hover,
+.our-team-item .thumb .content .social-list li a:hover,
+.footer .footer-box .links li>a:hover,
+.sub-header .sub-header-content ul li,
+.sidebar_wrap .sidebar .sidebar_widgets .tags a:hover,
+.blog-detail .post-details-tags-social .tags a:hover,
+.car-specification .contact-box .contact-details ul li span,
+
+.navbar-nav li a:hover,
+.subtitle,
+.sermons_meta li i,
+.text-custom-secondary,
+.latest_event_sermons h4 a:hover,
+.latest_event_sermons h6 a:hover,
+.input-group-text,
+.event_date span,
+.event_info ul li i,
+.footer_links a:hover,
+.follow_us ul li a:hover,
+.breadcrumb ul li a,
+.psot_share a:hover,
+.tl-product-content p,
+.sidebar_nav ul li a:hover,
+.post_date a,
+.blog_info h5 a:hover,
+.post_date a,
+.post_meta li i,
+.recent_post h6 a:hover,
+.breadcrumb ul li a:hover,
+.tk-btn-link:hover,
+.trip-box-wrapper .list-class i,
+.follow_us ul li a:hover,
+ .follow_us ul li a:focus,
+  .footer_links a:hover,
+   .footer_nav li a:hover,
+  .footer_nav li a.active,
+ .footer_widget p a:hover,
+ .sa-video-blog-popup .popup-youtube,
+ .navbar ul li ul.sub-menu li a:hover,
+ .trip-location,
+ .layout-switcher a.active,
+ .navbar ul li ul.sub-menu li a:hover ,
+ .popup-youtube,
+ .sermons_meta li a:hover,
+ .psot_tags a:hover,
+ .sermons_meta li a:hover,
+ .sermons_info ul li a:hover,
+ .sermons_list h6 a:hover,
+
+ .text-light-blue,
+.btn-submit-white:hover, .btn-submit-white:focus,
+.main-services-box:hover .main-service-wrapper .icon-box,
+.form-layout-1 .form-group .icon,
+.square-tabs .nav-tabs .nav-item .nav-link,
+.testimonials-inner .testimonial-content h6 i,
+.main-navigation-style-1 .main-menu>nav>ul>.menu-item.active>a,
+.home-2 a:focus, .home-2 a:hover,
+.text-custom-blue,
+.section-header-style-2 .higlight,
+.quality-services .quality-service-box .quality-service-wrapper .link-btn,
+.doctors-team .doctor-item .doctor-img .detail-btn,
+.doctors-team.darkblue .doctor-item .doctor-content ul li a,
+.form-style-2 .input-group .input-group-preappend,
+.blog-style-2 .post .post-wrapper .blog-meta .blog-btn,
+.intro-service-box .intro-service-box-inner .icon-box,
+.feature-style-3 .feature-box .feature-box-wrapper .icon-box,
+.doctors-team .doctor-item .doctor-content ul li a,
+.appoint-testi-style-2.style-4 .form-style-2 .input-group .input-group-preappend,
+.newsletter-style-2.style-2 .newsletter-form-wrapper .input-group .input-group-append button,
+.sub-header .sub-header-content ul li.active,
+.sidebar_wrap .sidebar .sidebar_widgets .sidebar-services li.active>a,
+.extra-page .header a i,
+.contact-bottom .contact-info .contact-info-wrapper .icon,
+.doctor-calendar-table table tbody tr td:hover span.time{
+    color: #99C24D;
+}
+
+.nice-select .option.selected,
+.input-group-text,
+.nav-tabs.testi-nav-tabs .nav-link.active,
+.nav-tabs.testi-nav-tabs .nav-link.active, .nav-tabs.testi-nav-tabs a.nav-link:focus,
+.select_amount li:hover,
+.page-navigation .page-item.active .page-link,
+.login-box,
+.newsletter-style-1 .newsletter-form-wrapper .input-group button{
+  color:#fff;
+}
+
+
+
+
+/* ....................................
+4. Bg black
+.......................................*/
+
+.bg-custom-black,
+.animated-button:after,
+.red-btn:before,
+.red-btn:after,
+.car-grid-box .car-grid-wrapper .car-btns,
+.swiper-button-next:after,
+ .swiper-button-prev:after,
+ .car-grid-box .car-grid-wrapper .car-btns:hover:after,
+ .car-list-box .car-list-wrapper .car-list-content .car-btns,
+ .car-list-box .car-list-wrapper .car-list-content .car-btns:hover:after,
+
+ #intro .owl-nav div:hover,
+ .header_top .top-btn li a.tilak-top-btn:hover,
+ .page-navigation .page-item.active .page-link,
+ .btn:hover,
+ .tl-header,
+ #header.sticky,
+ .primary-bg,
+ #blog.latest_blog .owl-nav div::after,
+ .event_date,
+ .latest_event_sermons .tl-slider-arrow .tl-right-arrow:hover,
+ .latest_event_sermons .tl-slider-arrow .tl-left-arrow:hover,
+ .tag_cloud a:hover,
+ .widget_title h6::after,
+ .contact_info,
+ .slick-slider .slick-arrow:hover,
+ .slider-arrow-layout-2 .slick-dots li button{
+    background: #2E4057;
+}
+
+.intro_text a.tilak-top-btn:hover {
+    color: #ffffff;
+    background-color: #2E4057;
+}
+
+/*black bg opacity classes*/
+.bg-black-op-9,
+.type4.fixed-nav,
+
+.our-testimonials:before{
+    background: rgba(46, 64, 87, 0.9);
+}
+
+.bg-black-op-8,
+.mnsry-work .overlay-full {
+    background: rgba(46, 64, 87, 0.8);
+}
+
+.bg-black-op-7 {
+    background: rgba(46, 64, 87, 0.7);
+}
+
+.bg-black-op-6,
+.blog-2-each:hover .blogoverlay-hover,
+.team-img:before {
+    background: rgba(46, 64, 87, 0.6);
+}
+
+.bg-black-op-5 {
+    background: rgba(46, 64, 87, 0.5);
+}
+
+.bg-black-op-4 {
+    background: rgba(46, 64, 87, 0.4);
+}
+
+.bg-black-op-3,
+.blogoverlay-hover {
+    background: rgba(46, 64, 87, 0.3);
+}
+
+.bg-black-op-2,
+.sidebar-left::-webkit-scrollbar-thumb {
+    background: rgba(46, 64, 87, 0.2);
+}
+
+.bg-black-op-1,
+.footer-social li a {
+    background: rgba(46, 64, 87, 0.1);
+}
+
+.bg-black-op-0 {
+    background: rgba(46, 64, 87, 0);
+}
+
+
+/* ....................................
+5. Bg yellow
+.......................................*/
+.btn,
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before,
+.topbar-2 .right-side:before,
+.topbar .left-side:before,
+.animated-button:hover:after,
+.menu-item-has-children .sub-menu li.menu-item>a:after,
+.tabs .nav-tabs .nav-item .nav-link.active,
+.tabs .nav-tabs .nav-item .nav-link:hover,
+.nice-select .option:hover,
+.range-slider .slider.slider-horizontal .slider-handle,
+.range-slider .slider.slider-horizontal .slider-selection,
+.about-us-sec .about-left-side .about-list ul li i,
+.bg-custom-red,
+.car-grid-box .car-grid-wrapper .car-btns:after,
+.car-grid-box .car-grid-wrapper .car-btns:hover,
+.our-team-item:hover .thumb .content,
+.download-app-sec .content-wrapper .content-box .content-icon span,
+.our-articles .post .blog-wrapper .blog-meta .blog-footer:before,
+.swiper-button-next:hover:after,
+ .swiper-button-prev:hover:after,
+ .about-us-1 .about-left-side:before,
+ .about-us-1 .about-right-side .about-list ul li i,
+ .page-item:hover .page-link,
+ .page-item:hover .page-link, .page-item.active .page-link,
+ .car-list-box .car-list-wrapper .car-list-content .car-btns:after,
+ .car-list-box .car-list-wrapper .car-list-content .car-btns:hover,
+ .car-specification .car-detail-box .list ul li i,
+ .blog-detail .social-media-box>ul>li>a.gg:hover,
+ .contact-info-box i,
+ .coming-soon .content-wrapper .social-media-icons ul li:hover a,
+ .gallery .grid .grid-item:hover a:after,
+
+
+
+   #intro .owl-nav div,
+   .input-group-text,
+   .select_amount li.active,
+   .nav-tabs.testi-nav-tabs .nav-link.active,
+   .nav-tabs.testi-nav-tabs .nav-link.active, .nav-tabs.testi-nav-tabs a.nav-link:focus,
+   .post_detail .sermons_inside,
+   .event_timer,
+   #tl .irs--round .irs-bar,
+   .select_amount li:hover,
+   .panel-title a.collapsed::before,
+   #blog.latest_blog .owl-nav div:hover::after,
+   .team_img:hover .team_url,
+
+   .btn-submit:hover, .btn-submit:focus,
+   .btn-submit:hover:before,
+    .btn-submit:hover,
+    .bg-light-blue,
+    .about-counter,
+    .rounded-btn-white:before,
+.rounded-btn:before,
+.btn-submit:before,
+.main-services-box .main-service-wrapper .icon-box,
+.main-services-box .main-service-wrapper:before,
+.features-wrapper .card .back,
+.square-tabs .nav-tabs .nav-item .nav-link:before,
+.slick-arrow,
+.single-blog .blog-overlay:before,
+.single-blog .post-meta .post-date,
+.doctor-calendar-table table thead tr th,
+.doctor-calendar-table table tbody tr td:before,
+.doctor-calendar-table table tbody tr td span.time,
+.copyright-style-1 .social-media ul li:hover a,
+#back-top a,
+.slick-dots li button,
+.main-navigation-style-1 .megamenu-nav ul .menu-item:hover a,
+ .main-navigation-style-1 .menu-item-has-children>.sub-menu>li.menu-item:hover>a,
+ .header-style-2.sticky,
+ .bg-custom-blue,
+ .about-style-3 .about-img:before,
+ .home-2 .rounded-btn-white:focus, .home-2 .rounded-btn-white:hover,
+ .quality-services .quality-service-box:hover .quality-service-wrapper:before,
+ .home-2 #back-top a,
+ .doctors-team .doctor-item .doctor-img:before,
+ .doctors-team.darkblue .doctor-item .doctor-content ul li a:hover,
+ .slider-arrow-layout-2 .slick-dots li.slick-active button,
+ .gallery-style-2 .filter-gallery>ul>li.active>a,
+ .gallery-style-2 .filter-gallery>ul>li:hover>a,
+ .gallery-style-2 .filter-gallery>ul>li>a:before,
+ .gallery-style-2 .gallery-grid .gallery-item>a:after,
+ .appoint-testi-style-2:after,
+ .appoint-testi-style-2.style-3 .appointment-sec .left-side:before,
+ .pricing-style-1 .price-box .price-wrapper .plan-type span:before,
+ .pricing-style-1 .price-box .price-wrapper .price-btn a:before,
+ .footer-style-2 .footer-box .social-media ul li:hover a,
+ .intro-service-box:hover,
+ .intro-service-box:hover .intro-service-box-inner,
+ .doctors-team .doctor-item .doctor-content ul li a:hover,
+ .gallery-style-2.style-3 .filter-gallery>ul>li.active>a,
+ .gallery-style-2.style-3 .filter-gallery>ul>li:hover>a,
+ .gallery-style-2.style-3 .filter-gallery>ul>li>a:before,
+ .gallery-style-2.style-3 .gallery-grid .gallery-item>a:after,
+ .newsletter-style-2.style-2 .newsletter-form-wrapper .input-group .input-group-append button:hover,
+ .newsletter-style-2.style-2 .newsletter-form-wrapper .input-group .input-group-append button:focus,
+ .newsletter-style-2.style-2 .newsletter-form-wrapper .input-group .input-group-append button:before,
+ .footer-style-2.style-2 .footer-box .social-media ul li:hover a,
+ .extra-page,
+ .extra-page .ghost,
+ .extra-page .over,
+ .about-style-3 .about-img:before, .about-style-2 .about-img:before, .about-sec .doctor-img:before,
+ .newsletter-style-2 .newsletter-form-wrapper .input-group .input-group-append button:hover,
+  .newsletter-style-2 .newsletter-form-wrapper .input-group .input-group-append button:focus,
+ .newsletter-style-2 .newsletter-form-wrapper .input-group .input-group-append button:before,
+.product-wrap .pro-some-action a 
+{
+    background: #99C24D;
+}
+
+
+
+
+
+.latest_event_sermons .tl-slider-arrow .tl-right-arrow,
+.latest_event_sermons .tl-slider-arrow .tl-left-arrow,
+#tl .irs--round .irs-from, #tl .irs--round .irs-to, #tl .irs--round .irs-single,
+.trip-date,
+.sidebar_wrap .sidebar .sidebar_widgets .tags a:hover,
+.blog-detail .post-details-tags-social .tags a:hover {
+  background-color: #99C24D;
+  color:#fff;
+}
+
+
+.sidebar_widgets .sidebar_nav ul li.btn-sidebar:hover {
+  background-color: #99C24D;
+  border-color:#99C24D;
+  color: #fff;
+}
+
+/*yellow bg opacity classes*/
+
+.bg-yellow-op-9,
+.team_url {
+    background: rgba(153, 194, 77, 0.9);
+}
+
+.bg-yellow-op-8 {
+    background: rgba(153, 194, 77, 0.8);
+}
+
+.bg-yellow-op-7 {
+    background: rgba(153, 194, 77, 0.7);
+}
+
+.bg-yellow-op-6 {
+    background: rgba(153, 194, 77, 0.6);
+}
+
+.bg-yellow-op-5 {
+    background: rgba(153, 194, 77, 0.5);
+}
+
+.bg-yellow-op-4,
+.sj-video-header .overlay {
+    background: rgba(153, 194, 77, 0.4);
+}
+
+.bg-yellow-op-3 {
+    background: rgba(153, 194, 77, 0.3);
+}
+
+.bg-yellow-op-2 {
+    background: rgba(153, 194, 77, 0.2);
+}
+
+.bg-yellow-op-1 {
+    background: rgba(153, 194, 77, 0.1);
+}
+
+
+/* ....................................
+6. Bg  light white
+.......................................*/
+
+.bg-light-white,
+.about-me[data-overlay]::before,
+.quote-nav,
+.blog-2[data-overlay]::before,
+.subscribe:hover,
+.flipper .back {
+    background: #f6f9f2;
+}
+
+
+/* ....................................
+7. Border Yellow
+.......................................*/
+.tabs .nav-tabs .nav-item .nav-link,
+.tabs .nav-tabs .nav-item .nav-link:hover,
+.tabs .nav-tabs .nav-item .nav-link.active,
+ .page-item:hover .page-link,
+  .page-item.active .page-link,
+  .page-item:hover .page-link,
+   .page-item.active .page-link,
+   blockquote span,
+   .faqs .section-header .section-heading .input-group .form-control-custom,
+   .sidebar_wrap .sidebar .sidebar_widgets .tags a:hover,
+   .blog-detail .post-details-tags-social .tags a:hover,
+   .car-specification .contact-box .contact-details ul li span,
+
+
+
+.input-group-text,
+.select_amount li.active,
+.nav-tabs.testi-nav-tabs .nav-link.active,
+.select_amount li.active:hover,
+.nav-tabs.testi-nav-tabs .nav-link.active, .nav-tabs.testi-nav-tabs a.nav-link:focus,
+.sidebar_nav ul li a:hover,
+#tl .irs--round .irs-handle,
+.select_amount li:hover,
+.form-control,
+
+.btn-submit,
+.video-btn-wrapper:before,
+.copyright-style-1 .social-media ul li:hover a,
+#back-top a,
+.slick-dots li button,
+.intro-service-3 .intro-widget .intro-widget-wrapper .intro-widget-block:before,
+.about-style-3 .about-img:before,
+.home-2 .rounded-btn-white:focus, .home-2 .rounded-btn-white:hover,
+.blog-style-2 .post .post-wrapper .blog-img .video-btn-wrapper:before,
+.about-style-3 .video-button .video-btn-wrapper:before,
+ .about-style-2 .video-button .video-btn-wrapper:before,
+ .home-2 #back-top a,
+ .doctors-team.darkblue .doctor-item .doctor-content ul li a,
+ .slider-arrow-layout-2 .slick-dots li.slick-active button,
+ .gallery-style-2 .filter-gallery>ul>li>a,
+ .rounded-btn,
+ .newsletter-style-2 .newsletter-form-wrapper .input-group .form-control,
+ .footer-style-2 .footer-box .social-media ul li:hover a,
+ .doctors-team .doctor-item .doctor-content ul li a,
+ .gallery-style-2.style-3 .filter-gallery>ul>li>a,
+ .newsletter-style-2.style-2 .newsletter-form-wrapper .input-group .form-control,
+ .newsletter-style-2.style-2 .newsletter-form-wrapper .input-group .input-group-append button,
+ .footer-style-2.style-2 .footer-box .social-media ul li:hover a,
+ .about-story .tabs .nav .nav-item:hover .nav-link, .about-story .tabs .nav .nav-item .nav-link.active,
+ .newsletter-style-1 .newsletter-form-wrapper .input-group .form-control-custom,
+ .square-tabs .nav-tabs .nav-item .nav-link,
+ .rounded-btn:focus,
+ .rounded-btn:hover,
+ .btn-submit:hover,
+ .btn-submit:focus,
+ .newsletter-style-2 .newsletter-form-wrapper .input-group .input-group-append button:hover,
+ .newsletter-style-2 .newsletter-form-wrapper .input-group .input-group-append button:focus,
+ .newsletter-style-2 .newsletter-form-wrapper .input-group .input-group-append button:before,
+ .form-control-custom:focus {
+    border-color: #99C24D;
+}
+
+
+/*border left color*/
+
+.happyclients:before {
+    border-left-color: #99C24D;
+}
+/*shop-detail-quantity*/
+.shop-detail-contents .quantity input
+{
+   border-left: 1px solid  #99C24D;
+    border-right: 1px solid  #99C24D;
+    color: #99C24D;
+}
+.shop-detail-contents .quantity {
+    border-color:  #99C24D;
+}
+
+.shop-detail-contents .quantity i{
+    color:  #99C24D;
+}
+
+.shop-detail-contents .btn-first {
+    border-color: #99C24D;
+    background-color:  #99C24D;
+    color: #fff;
+}
+.shop-detail-contents .btn-first:hover {
+    border-color: #9fd340;
+    background-color: #9fd340;
+    color: #fff;
+}
+.detail-slider .slick-arrow 
+{   
+    background-color: #99C24D;
+
+}
+    
+.detail-page-slider1 .slick-arrow
+{
+background-color: #99C24D;
+    
+}
+.shop-icons a:hover {
+    color: #99C24D;
+}
+/*shop-detail-quantity end*/
+
+/*border bottom color*/
+
+.form-control-custom:focus,
+.login-section .card,
+.main-navigation-style-1 .menu-item-has-children>.sub-menu:after,
+.section-header-style-2 .higlight,
+.blog-style-2 .post:hover .post-wrapper .blog-meta{
+  border-bottom-color: #99C24D;
+}
+
+.tabs .nav-tabs .nav-item .nav-link.active:before,
+.main-navigation-style-1 .menu-item-has-megamenu .megamenu, .main-navigation-style-1 .menu-item-has-children>.sub-menu{
+  border-top-color: #99C24D;
+}
+
+.irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before{
+  border-top-color: #99C24D;
+}
+
+/* ....................................
+8. Border black
+.......................................*/
+.border-black,
+.menu-social li a,
+.input-border,
+.btn-filter.active,
+.btn-filter:hover,
+.video-area,
+.black-border,
+.inner-cart-box,
+.prdt-list-btns .btn-detail,
+.rate-img-bt .btn,
+.sermons_inside ul li a:hover,
+.tag_cloud a:hover{
+    border-color: #2e4057;
+}
+
+
+.nav-tabs.testi-nav-tabs .nav-link.active{
+  color: #fff;
+  background-color:  #99C24D;
+  border-color:  #99C24D;
+}
+
+.nav-tabs.testi-nav-tabs a.nav-link:hover {
+    color: #fff;
+    background-color: #99C24D;
+  border-color: #99C24D;}
+
+
+    .video_icon a{
+      background-color: #fff;
+      color: #99C24D;
+    }
+
+    .select_amount li{
+    background-color: #99c24d3b;
+      border-color: #99c24d3b;
+    }
+
+    .about_company .nav-tabs.testi-nav-tabs li a,
+    .audio-player .player-controls progress[value] {
+    background-color: #99c24d3b;
+      border-color: #99c24d3b;
+    }
+
+    .secondary-bg{
+      background: #fbfbfb;
+    }
+
+    .form-control{
+      border-color: #99c24d3b;
+    }

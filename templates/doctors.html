@@ -1,0 +1,553 @@
+<!doctype html>
+{% extends "base.html"%}
+{% block title%}
+AMIS|Doctors
+{% endblock %}
+
+
+{% block body%}
+{%load static%}
+   <!-- Start Main Body -->
+ <body class="animated-banner">
+
+    <!-- Start Main Body -->
+
+    <div class="main-body">
+
+       
+        <!-- Start Subheader -->
+        <div class="sub-header p-relative">
+            <div class="overlay overlay-bg-black"></div>
+            <div class="pattern"></div>
+            <div class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="sub-header-content p-relative">
+                                <h1 class="text-custom-white lh-default fw-600">Our Doctors</h1>
+                                <ul class="custom">
+                                    <li>
+                                        <a href="{% url 'patientDashboard'%}"  class="text-custom-white">Home</a>
+                                    </li>
+                                    <li class="text-custom-white active">Our Doctors</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Subheader -->
+        <!-- Start Team -->
+		<div class="container">
+		    <div class="row">
+			<div class="col-sm-4">
+		        <div class="form-group">
+                  <label class="col-form-label" for="inputDefault"><h4  class="text-custom-black fw-600 fs-20">Search By Name :</h4></label>
+                  <input type="text" class="form-control" placeholder="input" id="inputDefault">
+        </div>
+		    </div>
+						<div class="col-sm-4">
+		        <div class="form-group">
+                  <label class="col-form-label" for="inputDefault"><h4  class="text-custom-black fw-600 fs-20">Search By Specialist :</h4></label>
+                  <div class="form-group">
+    <select class="custom-select">
+      <option selected="">Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+        </div>
+		    </div>
+						<div class="col-sm-4">
+		        <div class="form-group">
+                  <label class="col-form-label " for="inputDefault"><h4  class="text-custom-black fw-600 fs-20">Search By ID :</h4></label>
+                  <input type="text" class="form-control" placeholder="input" id="inputDefault">
+        </div>
+		    </div>
+			</div>
+		        </div>
+
+
+        <section class="section-padding bg-light-white">
+            <div class="container">
+                <div class="row doctors-team-style-2">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-block p-relative mb-xl-30">
+                            <div class="inner-box">
+                                <div class="image animate-img">
+                                    <img src="{%static "assets/images/doctors/doctor1.jpg"%}" alt="img" class="full-width">
+                                    <div class="overlay-box">
+                                        <div class="overlay-inner p-relative full-height">
+                                            <ul class="team-social-box custom">
+                                                <li class="youtube"><a href="#" class="fab fa-youtube fs-16"></a></li>
+                                                <li class="linkedin"><a href="#" class="fab fa-linkedin fs-16"></a></li>
+                                                <li class="facebook"><a href="#" class="fab fa-facebook-f fs-16"></a></li>
+                                                <li class="twitter"><a href="#" class="fab fa-twitter fs-16"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lower-content p-relative text-center">
+                                    <h4><a href="#" class="text-custom-black fw-600 fs-20">Eachann Jhon</a></h4>
+                                    <p class="designation text-light-white">Gastroenterologists</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-block p-relative mb-xl-30">
+                            <div class="inner-box">
+                                <div class="image animate-img">
+                                    <img src="{%static "assets/images/doctors/doctor1.jpg"%}" alt="img" class="full-width">
+                                    <div class="overlay-box">
+                                        <div class="overlay-inner p-relative full-height">
+                                            <ul class="team-social-box custom">
+                                                <li class="youtube"><a href="#" class="fab fa-youtube fs-16"></a></li>
+                                                <li class="linkedin"><a href="#" class="fab fa-linkedin fs-16"></a></li>
+                                                <li class="facebook"><a href="#" class="fab fa-facebook-f fs-16"></a></li>
+                                                <li class="twitter"><a href="#" class="fab fa-twitter fs-16"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lower-content p-relative text-center">
+                                    <h4><a href="#" class="text-custom-black fw-600 fs-20">Dr. Addison Smith</a></h4>
+                                    <p class="designation text-light-white">Cardiologists</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-block p-relative mb-xl-30">
+                            <div class="inner-box">
+                                <div class="image animate-img">
+                                    <img src="{%static "assets/images/doctors/doctor3.jpg"%}" alt="img" class="full-width">
+                                    <div class="overlay-box">
+                                        <div class="overlay-inner p-relative full-height">
+                                            <ul class="team-social-box custom">
+                                                <li class="youtube"><a href="#" class="fab fa-youtube fs-16"></a></li>
+                                                <li class="linkedin"><a href="#" class="fab fa-linkedin fs-16"></a></li>
+                                                <li class="facebook"><a href="#" class="fab fa-facebook-f fs-16"></a></li>
+                                                <li class="twitter"><a href="#" class="fab fa-twitter fs-16"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lower-content p-relative text-center">
+                                    <h4><a href="#" class="text-custom-black fw-600 fs-20">Dr. Sarah Taylor</a></h4>
+                                    <p class="designation text-light-white">Nephrologists</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-block p-relative mb-xl-30">
+                            <div class="inner-box">
+                                <div class="image animate-img">
+                                    <img src="{%static "assets/images/doctors/doctor4.jpg"%}" alt="img" class="full-width">
+                                    <div class="overlay-box">
+                                        <div class="overlay-inner p-relative full-height">
+                                            <ul class="team-social-box custom">
+                                                <li class="youtube"><a href="#" class="fab fa-youtube fs-16"></a></li>
+                                                <li class="linkedin"><a href="#" class="fab fa-linkedin fs-16"></a></li>
+                                                <li class="facebook"><a href="#" class="fab fa-facebook-f fs-16"></a></li>
+                                                <li class="twitter"><a href="#" class="fab fa-twitter fs-16"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lower-content p-relative text-center">
+                                    <h4><a href="#" class="text-custom-black fw-600 fs-20">Dr. Aiken Ward</a></h4>
+                                    <p class="designation text-light-white">Dermatologist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row doctors-team darkblue">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-xl-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{%static "assets/images/doctors/doctor5.jpg"%}" class="rounded-circle full-width" alt="image">
+                               <a href="#" class="detail-btn"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">Dr. Addison Smith</a></h6>
+                                <p class="text-light-white">Cardiologists</p>
+                                <ul class="custom">
+                                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-xl-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{%static "assets/images/doctors/doctor10.jpg"%}" class="rounded-circle full-width" alt="image">
+                               <a href="#" class="detail-btn"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">Dr. Sarah Taylor</a></h6>
+                                <p class="text-light-white">Nephrologists</p>
+                                <ul class="custom">
+                                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-xl-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{%static "assets/images/doctors/doctor8.jpg"%}" class="rounded-circle full-width" alt="image">
+                               <a href="#" class="detail-btn"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">Dr. Aiken Ward</a></h6>
+                                <p class="text-light-white">Dermatologists</p>
+                                <ul class="custom">
+                                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-xl-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{%static "assets/images/doctors/doctor7.jpg"%}" class="rounded-circle full-width" alt="image">
+                               <a href="#" class="detail-btn"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">Babatunde Jon</a></h6>
+                                <p class="text-light-white">Endocrinologists</p>
+                                <ul class="custom">
+                                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row doctors-team style-2">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-md-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{%static "assets/images/doctors/doctor5.jpg"%}" class="full-width" alt="image">
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">Dr. Addison Smith</a></h6>
+                                <p class="text-light-white">Cardiologists</p>
+                                <ul class="custom">
+                                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-md-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{%static "assets/images/doctors/doctor6.jpg"%}" class="full-width" alt="image">
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">Dr. Sarah Taylor</a></h6>
+                                <p class="text-light-white">Nephrologists</p>
+                                <ul class="custom">
+                                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-sm-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{%static "assets/images/doctors/doctor6.jpg"%}" class="full-width" alt="image">
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">Dr. Aiken Ward</a></h6>
+                                <p class="text-light-white">Dermatologists</p>
+                                <ul class="custom">
+                                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{%static "assets/images/doctors/doctor2.jpg"%}" class="full-width" alt="image">
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">Babatunde Jon</a></h6>
+                                <p class="text-light-white">Endocrinologists</p>
+                                <ul class="custom">
+                                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Team -->
+        <!-- Start Newsletter -->
+        <section class="newsletter-style-1 section-padding bg-light-blue">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="newsletter-content-wrapper mb-md-40">
+                            <h3 class="text-custom-white fw-600">Join Our Newsletter</h3>
+                            <p class="text-custom-white">Join us for Latest News and Updates</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="newsletter-form-wrapper">
+                            <form>
+                                <div class="input-group">
+                                    <input type="email" name="#" class="form-control form-control-custom" placeholder="Email Id">
+                                    <div class="input-group-append">
+                                        <button type="submit">Subscribe</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Newsletter -->
+        <!-- Start Footer -->
+      <footer class="section-padding bg-custom-white footer-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-box mb-md-40">
+
+                            <div class="logo">
+
+                                <a href="#">
+
+                                    <h2>AMIS</h2>
+                                </a>
+
+                            </div>
+
+                            <p class="text-custom-black no-margin">
+
+                               Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to emulate human cognition
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-md-40">
+
+                            <h5 class="text-custom-black fw-600">Working Time</h5>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Mon - Wed: <span class="text-custom-black fw-600">9:00 AM - 7:00 PM</span><br>
+
+                                Thursday: <span class="text-custom-black fw-600">9:00 AM - 6:30 PM</span><br>
+
+                                Friday: <span class="text-custom-black fw-600">9:00 AM - 6:00 PM</span><br>
+
+                                Sat - Sun: <span class="text-custom-black fw-600">Closed</span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-sm-40">
+
+                            <h5 class="text-custom-black fw-600">Emergency Cases</h5>
+
+                            <h4 class="text-light-blue fw-600">1-800-123-4567</h4>
+
+                            <p class="no-margin text-custom-black fs-14">when you are faced with an emergency or injury, you will know what to do. Your confidence</p>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info">
+
+                            <h5 class="text-custom-black fw-600">Our Location</h5>
+
+                            <p class="text-custom-black fs-14">O46F SDC Gorakhpur,<br>Uttar Pradesh</p>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Email: <a href="#" class="text-custom-black fw-600">info@amis.com</a><br>
+
+                                Phone: <a href="#" class="text-custom-black fw-600">+(347) 123 456 7890</a>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- End Footer -->
+
+        <!-- Start Copyright -->
+
+        <div class="copyright-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 align-self-center">
+
+                        <p class="text-custom-black">
+
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="social-media mb-xl-20">
+
+                            <ul class="custom">
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-facebook-f"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-twitter"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-linkedin"></i></a></li>
+
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-youtube"></i></a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- End Copyright -->
+
+        <!-- back to top -->
+
+        <div id="back-top" class="back-top">
+
+          <a href="#top"><i class="flaticon-up-arrow"></i></a>
+
+        </div>
+
+    </div>
+
+    <!-- End Main Body -->
+
+       <!-- Builder Pannel start-->
+
+
+
+    <!-- Builder Pannel end-->
+
+
+
+    <!-- Theme skins -->
+
+
+  <!-- Theme skins -->
+
+    <!-- Place all Scripts Here -->
+
+    <!-- jQuery -->
+
+    <script src="{%static "assets/js/jquery.min.js"%}"></script>
+
+    <!-- Popper -->
+
+    <script src="assets/js/popper.min.js"%}"></script>
+
+    <!-- Bootstrap -->
+
+    <script src="{%static "assets/js/bootstrap.min.js"%}"></script>
+
+    <!-- Range Slider -->
+
+    <script src="{%static "assets/js/ion.rangeSlider.min.js"%}"></script>
+
+    <!-- Slick Slider -->
+
+    <script src="{%static "assets/js/slick.min.js"%}"></script>
+
+    <!-- Datepicker -->
+
+    <script src="{%static "assets/js/datepicker.js"%}"></script>
+
+    <script src="{%static "assets/js/datepicker.en.js"%}"></script>
+
+    <!-- Nice Select -->
+
+    <script src="{%static "assets/js/jquery.nice-select.js"%}"></script>
+
+    <!-- Nice Select -->
+
+    <script src="{%static "assets/js/particles.js"%}"></script>
+
+    <!-- Magnific Popup -->
+
+    <script src="{%static "assets/js/jquery.magnific-popup.min.js"%}"></script>
+
+    <!-- Google Map -->
+
+    <script src="../../../../external.html?link=https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+
+    <!-- Isotope Gallery -->
+
+    <script src="{%static "assets/js/isotope.pkgd.min.js"%}"></script>
+
+    <!-- Custom Js -->
+
+    <script src="{%static "assets/js/custom.js"%}"></script>
+
+    <!-- /Place all Scripts Here -->
+
+
+{% endblock %}

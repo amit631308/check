@@ -1,0 +1,238 @@
+<!doctype html>
+{% extends "base.html"%}
+{% block title%}
+AMIS|Payment List
+{% endblock %}
+
+
+{% block body%}
+{%load static%}
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+      <!-- Mask -->
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <!-- Header container -->
+      <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="display-2 text-white">Hello Jesse</h1>
+            <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
+            <a href="{% url 'profile'%}" class="btn btn-info">Back to profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="container">
+<div class="row">
+  <div class="col-sm-4"></div>
+    <div class="col-sm-4" style="margin-top:5px;"><span class="badge badge-primary"><h4>Here All Payment Status</h4></span> </div>
+  <div class="col-sm-4" style="margin-top:5px;"> <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+ <input class="form-control" type="text"id="myInput" onkeyup="myFunction()" placeholder="Search by Doctor Name" aria-label="Search" title="Type in a name">
+</div></div>
+</div>
+
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:20%;"> Doctor Name</th>
+    <th style="width:20%;">Appointment Id</th>
+
+    <th style="width:20%;">Purpose</th>
+
+    <th style="width:20%;">Amount</th>
+
+    <th style="width:20%;">Status</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+       <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+
+      <td><span class="glyphicon glyphicon-ok" title="delete" aria-hidden="true"></span>
+
+
+      </td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbkop</td>
+    <td>Sweden</td>
+      <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+      <td><span class="glyphicon glyphicon-ok" title="delete" aria-hidden="true"></span>
+
+      </td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+      <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+      <td>
+      <span class="glyphicon glyphicon-remove" title="Edit"  aria-hidden="true"></span>
+      </td>
+  </tr>
+  <tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+      <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+      <td><span class="glyphicon glyphicon-ok" title="delete" aria-hidden="true"></span>
+
+      </td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Canada</td>
+      <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+      <td>
+      <span class="glyphicon glyphicon-remove" title="Edit"  aria-hidden="true"></span>
+      </td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Italy</td>
+      <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+      <td><span class="glyphicon glyphicon-ok" title="delete" aria-hidden="true"></span>
+
+      </td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>UK</td>
+      <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+      <td>
+      <span class="glyphicon glyphicon-remove" title="Edit"  aria-hidden="true"></span>
+      </td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+      <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+      <td>
+      <span class="glyphicon glyphicon-remove" title="Edit"  aria-hidden="true"></span>
+
+      </td>
+  </tr>
+</table>
+</div>
+<div class="container">
+<hr class="my-4" style="height:2px;border-width:0;color:gray;background-color:gray">
+  <div>
+        <footer class="section-padding bg-custom-white footer-style-1">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-box mb-md-40">
+
+                            <div class="logo">
+
+                                <a href="#">
+
+                                    <h2>AMIS</h2>
+                                </a>
+
+                            </div>
+
+                            <p class="text-custom-black no-margin">
+
+                               Artificial intelligence (AI) in healthcare is the use of complex algorithms and software to emulate human cognition
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-md-40">
+
+                            <h5 class="text-custom-black fw-600">Working Time</h5>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Mon - Wed: <span class="text-custom-black fw-600">9:00 AM - 7:00 PM</span><br>
+
+                                Thursday: <span class="text-custom-black fw-600">9:00 AM - 6:30 PM</span><br>
+
+                                Friday: <span class="text-custom-black fw-600">9:00 AM - 6:00 PM</span><br>
+
+                                Sat - Sun: <span class="text-custom-black fw-600">Closed</span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info mb-sm-40">
+
+                            <h5 class="text-custom-black fw-600">Emergency Cases</h5>
+
+                            <h4 class="text-light-blue fw-600">1-800-123-4567</h4>
+
+                            <p class="no-margin text-custom-black fs-14">when you are faced with an emergency or injury, you will know what to do. Your confidence</p>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="footer-info">
+
+                            <h5 class="text-custom-black fw-600">Our Location</h5>
+
+                            <p class="text-custom-black fs-14">O46F SDC Gorakhpur,<br>Uttar Pradesh</p>
+
+                            <p class="no-margin text-custom-black fs-14">
+
+                                Email: <a href="#" class="text-custom-black fw-600">info@amis.com</a><br>
+
+                                Phone: <a href="#" class="text-custom-black fw-600">+(347) 123 456 7890</a>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
+
+{% endblock %}
