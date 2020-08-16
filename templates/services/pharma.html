@@ -51,53 +51,17 @@ AMIS|Pharma Stores
 
 
   </tr>
+  {%for data in data%}
   <tr>
-    <td>273001</td>
-    <td>Germany</td>
-      <td><a href="{% url 'firstpharmastore'%}"> <i class="fas fa-cloud-upload-alt"></i></a></td>
+    {%if data.postal%}
+    <td>{{data.postal}}</td>
+    {%else%}
+    <td>273165</td>
+    {%endif%}
+    <td>{{data.user.first_name}}</td>
+      <td><a href="{% url 'firstpharmastore'%}?id={{data.username}}"> <i class="fas fa-cloud-upload-alt"></i></a></td>
   </tr>
-  <tr>
-
-    <td>273001</td>
-    <td>Germany</td>
-      <td><a href="{% url 'firstpharmastore'%}"> <i class="fas fa-cloud-upload-alt"></i></a></td>
-  </tr>
-  <tr>
-
-    <td>273006</td>
-    <td>rmany</td>
-      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
-  </tr>
-  <tr>
-
-    <td>273009</td>
-    <td>Gny</td>
-      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
-  </tr>
-  <tr>
-
-    <td>273007</td>
-    <td>many</td>
-      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
-  </tr>
-  <tr>
-
-    <td>273004</td>
-    <td>ermany</td>
-      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
-  </tr>
-  <tr>
-
-    <td>273003</td>
-    <td>Germany</td>
-      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
-  </tr>
-  <tr>
-
-    <td>273008</td>
-    <td>Germany</td>
-      <td><a href="{% url 'firstpharmastore'%}" ><i class="fas fa-cloud-upload-alt"></i></a></td>
-  </tr>
+  {%endfor%}
 </table>
 </div>
 

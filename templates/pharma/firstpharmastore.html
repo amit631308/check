@@ -52,8 +52,8 @@
 						<div class="col-md-12 col-12">
 							<nav aria-label="breadcrumb" class="page-breadcrumb">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="{% url 'firstpharmastore'%}">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">AMIS|Stores</li>
+									
+									<li class="breadcrumb-item active" aria-current="page"><a href="{% url 'shop'%}">Back to AMIS|Stores</a></li>
 								</ol>
 							</nav>
 							<h2 class="breadcrumb-title">Pain Relif	<span class="text-small text-white ml-2"> <b>70 Products</b></span></h2>
@@ -97,7 +97,7 @@
 
 							<div class="row align-items-center pb-3">
 								<div class="col-md-4 col-12 d-md-block d-none custom-short-by">
-									<h3 class="title pharmacy-title">Amit Medical Store</h3>
+									<h3 class="title pharmacy-title">{{user.first_name}} Medical Store</h3>
 									<p class="doc-location mb-2 text-ellipse pharmacy-location"><i class="fas fa-map-marker-alt mr-1"></i> 96 Red Hawk Road Cyrus, MN 56323 </p>
 
 								</div>
@@ -118,385 +118,79 @@
 							</div>
 
 							<div class="row">
+							{%for product in products%}
 								<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
 	                                <div class="profile-widget">
 										<div class="doc-img">
+											{%if product.image%}
 											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product.jpg"%}">
+												<img class="img-fluid" alt="Product image" src="{{product.image.url}}">
 											</a>
+											{%else%}
+											<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product.jpg"%}">
+											{%endif%}
 											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
 												<i class="far fa-bookmark"></i>
 											</a>
 										</div>
 										<div class="pro-content" id="myTable" >
 											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Benzaxapine Croplex</a>
+												<a href="#" tabindex="-1">{{product.product_name}}</a>
 											</h3>
 											<div class="row align-items-center">
 												<div class="col-lg-6">
-													<span class="price">$19.00</span>
-													<span class="price-strike">$45.00</span>
+														<span class="price">{{product.discount}}</span>
+													<span class="price-strike">{{product.price}} </span>
 												</div>
 												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+													<div class="col-sm-5 col">
+														<a href="#Add_Specialities_details{{product.id}}" data-toggle="modal" class="btn btn-primary float-right mt-2">Add</a>
+													</div>
+													
 												</div>
 											</div>
 										</div>
 									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product13.jpg"%}"">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable" >
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Rapalac Neuronium</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$16.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
+								</div>
+								
+								<!-- Add Modal -->
+				<div class="modal fade" id="Add_Specialities_details{{product.id}}" aria-hidden="true" role="dialog">
+					<div class="modal-dialog modal-dialog-centered" role="document" >
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Add Category</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form method="post">
+									{%csrf_token%}
+									<div class="row form-row">
+										<div class="col-12">
+											<div class="form-group">
+												<label>Quantity</label>
+												<input type="number"  name="quantity1" class="form-control">
+												
+												<input type="text" value="{{product.product_name}}" name="name1" class="form-control" hidden >
+												
+												<input type="text" value="{{product.category}}" name="category1" class="form-control" hidden >
+												
+												<input type="text" value="{{product.discount}}" name="price1" class="form-control" hidden>
+												
+												
 											</div>
 										</div>
+										
 									</div>
-                            	</div>
-                             	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable" >
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Ombinazol Bonibamol</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$22.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                             	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product3.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Dantotate Dantodazole</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$10.00</span>
-													<span class="price-strike">$12.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product3.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Acetrace Amionel</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$7.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product3.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Ergorinex Caffeigestin</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$15.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                           	 	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product3.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Alispirox Aerorenone</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$26.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product10.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Lysofranil Dorzostin</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$10.00</span>
-													<span class="price-strike">$12.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product4.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Nitrolozin Zithrotropin</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$12.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product14.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Cordacriptine Mardipine</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$9.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product15.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Iconevist Ampyplex</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$16.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product6.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Alcafsteride Omebide</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$7.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product15.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Neubide Aborase</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$30.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product7.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">ITONE eye drops 10ml</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$50.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
-                            	<div class="col-md-12 col-lg-4 col-xl-4 product-custom">
-	                                <div class="profile-widget">
-										<div class="doc-img">
-											<a href="#" tabindex="-1">
-												<img class="img-fluid" alt="Product image" src="{%static "assets/images/products/product8.jpg"%}">
-											</a>
-											<a href="javascript:void(0)" class="fav-btn" tabindex="-1">
-												<i class="far fa-bookmark"></i>
-											</a>
-										</div>
-										<div class="pro-content" id="myTable">
-											<h3 class="title pb-4">
-												<a href="#" tabindex="-1">Antatriene Drospiletra</a>
-											</h3>
-											<div class="row align-items-center">
-												<div class="col-lg-6">
-													<span class="price">$10.00</span>
-													<span class="price-strike">$20.00</span>
-												</div>
-												<div class="col-lg-6 text-right">
-													<a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-                            	</div>
+									<button type="submit" class="btn btn-primary btn-block">Ordre</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /ADD Modal -->
+                   {%endfor%}
 
                              </div>
                              <div class="col-md-12 text-center">
@@ -506,6 +200,7 @@
 					</div>
 				</div>
 			</div>
+				
 
 
 			<!-- Footer -->
@@ -652,6 +347,12 @@ $(document).ready(function(){
   });
 });
 </script>
+{% if status %}
+    <script>
+        alert("{{status}}");
+        
+    </script>
+    {%endif%}
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="{%static "assets/js/jquery.min.js"%}"></script>

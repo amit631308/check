@@ -1,153 +1,7 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Mirrored from doccure-html.dreamguystech.com/template/pharmacy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2020 11:51:13 GMT -->
-<head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>Pharmacy Dashboard</title>
-
-		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{%static "assets/assets/images/favicon.png"%}">
-
-		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{%static "assets/assets/css/bootstrap.min.css"%}">
-
-		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="{%static "assets/assets/css/font-awesome.min.css"%}">
-
-		<!-- Feathericon CSS -->
-        <link rel="stylesheet" href="{%static "assets/assets/css/feathericon.min.css"%}">
-
-		<link rel="stylesheet" href="{%static "assets/assets/plugins/morris/morris.css"%}">
-
-		<!-- Main CSS -->
-        <link rel="stylesheet" href="{%static "assets/assets/css/style.css"%}">
-
-		<!--[if lt IE 9]>
-			<script src="{%static "assets/assets/js/html5shiv.min.js"%}"></script>
-			<script src="{%static "assets/assets/js/respond.min.js"%}"></script>
-		<![endif]-->
-    </head>
-    <body>
-
-		<!-- Main Wrapper -->
-        <div class="main-wrapper">
-
-			<!-- Header -->
-            <div class="header">
-
-				<!-- Logo -->
-                <div class="header-left">
-
-                </div>
-				<!-- /Logo -->
-
-
-
-				<div class="top-nav-search">
-
-				</div>
-
-				<!-- Mobile Menu Toggle -->
-				<!-- /Mobile Menu Toggle -->
-
-				<!-- Header Right Menu -->
-				<ul class="nav user-menu">
-
-					<!-- Notifications -->
-					<li class="nav-item dropdown noti-dropdown">
-
-						<div class="dropdown-menu notifications">
-
-
-						</div>
-					</li>
-					<!-- /Notifications -->
-
-					<!-- User Menu -->
-					<li class="nav-item dropdown has-arrow">
-						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-							<span class="user-img"><img class="rounded-circle" src="{%static "assets/assets/img/profiles/avatar-01.jpg"%}" width="31" alt="Ryan Taylor"></span>
-						</a>
-						<div class="dropdown-menu">
-							<div class="user-header">
-								<div class="avatar avatar-sm">
-									<img src="{%static "assets/assets/img/profiles/avatar-01.jpg"%}" alt="User Image" class="avatar-img rounded-circle">
-								</div>
-								<div class="user-text">
-									<h6>Ryan Taylor</h6>
-									<p class="text-muted mb-0">Administrator</p>
-								</div>
-							</div>
-							<a class="dropdown-item" href="profile.html">My Profile</a>
-							<a class="dropdown-item" href="settings.html">Settings</a>
-							<a class="dropdown-item" href="login.html">Logout</a>
-						</div>
-					</li>
-					<!-- /User Menu -->
-
-				</ul>
-				<!-- /Header Right Menu -->
-
-            </div>
-			<!-- /Header -->
-
-			<!-- Sidebar -->
-            <div class="sidebar" id="sidebar">
-                <div class="sidebar-inner slimscroll">
-					<div id="sidebar-menu" class="sidebar-menu">
-						<ul>
-							<li class="menu-title">
-								<span>Main</span>
-							</li>
-							<li class="active">
-								<a href="{% url 'pharmacistDashboard'%}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-document"></i> <span> Products</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="{% url 'products'%}">Products</a></li>
-									<li><a href="{% url 'addproduct'%}">Add Product</a></li>
-									<li><a href="{% url 'outstock'%}">Out-Stock</a></li>
-
-								</ul>
-							</li>
-							<li>
-								<a href="{% url 'cat'%}"><i class="fe fe-layout"></i> <span>Categories</span></a>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-star-o"></i> <span> Purchase</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="{% url 'purchase'%}">Purchase</a></li>
-									<li><a href="{% url 'order'%}">Orders</a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-
-							</li>
-							<li><a href="{% url 'transaction'%}"><i class="fe fe-table"></i> <span>Transaction</span></a></li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-document"></i> <span> Reports</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="{% url 'report'%}">Invoice Reports</a></li>
-								</ul>
-							</li>
-							<li class="menu-title">
-								<span>Pages</span>
-							</li>
-							<li>
-								<a href="{% url 'dawaprofile'%}"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
-							</li>
-
-
-						</ul>
-					</div>
-                </div>
-            </div>
-			<!-- /Sidebar -->
-			
+			{%extends "pharma/base.html"%}
+			{%load static%}
+			{%block body%}
 			<!-- Page Wrapper -->
             <div class="page-wrapper">
                 <div class="content container-fluid">
@@ -183,16 +37,17 @@
 												</tr>
 											</thead>
 											<tbody>
+												{%for data in products_category%}
 												<tr>
-													<td>01</td>
+													<td>{{data.id}}</td>
 													
 													<td>
 														<h2 class="table-avatar">	
-															Phytopathology‎
+															{{data.category}}
 														</h2>
 													</td>
 													
-													<td>01-May-2020-12:00</td>
+													<td>{{data.added_on}}</td>
 
 													<td class="text-right">
 														<div class="actions">
@@ -205,204 +60,8 @@
 														</div>
 													</td>
 												</tr>
-												<tr>
-													<td>02</td>
-													
-													<td>
-														<h2 class="table-avatar">	
-															Family care
-														</h2>
-													</td>
-													
-													<td>03-May-2020-08:00</td>
-
-													<td class="text-right">
-														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
-																<i class="fe fe-pencil"></i> Edit
-															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>03</td>
-													
-													<td>
-														<h2 class="table-avatar">	
-															Cancer
-														</h2>
-													</td>
-													
-													<td>05-May-2020-06:00</td>
-
-													<td class="text-right">
-														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
-																<i class="fe fe-pencil"></i> Edit
-															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>04</td>
-													
-													<td>
-														<h2 class="table-avatar">	
-															Hair care
-														</h2>
-													</td>
-													
-													<td>06-May-2020-01:00</td>
-
-													<td class="text-right">
-														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
-																<i class="fe fe-pencil"></i> Edit
-															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>05</td>
-													
-													<td>
-														<h2 class="table-avatar">	
-															Skin care	
-														</h2>
-													</td>
-													
-													<td>05-May-2020-02:00</td>
-
-													<td class="text-right">
-														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
-																<i class="fe fe-pencil"></i> Edit
-															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>06</td>
-													
-													<td>
-														<h2 class="table-avatar">	
-															Rare diseases‎	
-														</h2>
-													</td>
-													
-													<td>06-May-2020-06:00</td>
-
-													<td class="text-right">
-														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
-																<i class="fe fe-pencil"></i> Edit
-															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>07</td>
-													
-													<td>
-														<h2 class="table-avatar">	
-															Baby care
-														</h2>
-													</td>
-													
-													<td>07-May-2020-12:00</td>
-
-													<td class="text-right">
-														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
-																<i class="fe fe-pencil"></i> Edit
-															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>08</td>
-													
-													<td>
-														<h2 class="table-avatar">	
-															Inflammations	
-														</h2>
-													</td>
-													
-													<td>07-May-2020-05:00</td>
-
-													<td class="text-right">
-														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
-																<i class="fe fe-pencil"></i> Edit
-															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>09</td>
-													
-													<td>
-														<h2 class="table-avatar">	
-															Sleep disorders‎
-														</h2>
-													</td>
-													
-													<td>07-May-2020-08:00</td>
-
-													<td class="text-right">
-														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
-																<i class="fe fe-pencil"></i> Edit
-															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>10</td>
-													
-													<td>
-														<h2 class="table-avatar">	
-															Infectious diseases‎	
-														</h2>
-													</td>
-													
-													<td>08-May-2020-02:00</td>
-
-													<td class="text-right">
-														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
-																<i class="fe fe-pencil"></i> Edit
-															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-														</div>
-													</td>
-												</tr>
+												{%endfor%}
+												
 											</tbody>
 										</table>
 									</div>
@@ -426,12 +85,13 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<form>
+							<form method="post">
+								{%csrf_token%}
 								<div class="row form-row">
 									<div class="col-12">
 										<div class="form-group">
 											<label>Category</label>
-											<input type="text" class="form-control">
+											<input type="text" name="category" class="form-control">
 										</div>
 									</div>
 									
@@ -498,23 +158,4 @@
         </div>
 		<!-- /Main Wrapper -->
 		
-		<!-- jQuery -->
-        <script src="{%static "assets/assets/js/jquery-3.2.1.min.js"%}"></script>
-
-		<!-- Bootstrap Core JS -->
-        <script src="{%static "assets/assets/js/popper.min.js"%}"></script>
-        <script src="{%static "assets/assets/js/bootstrap.min.js"%}"></script>
-
-		<!-- Slimscroll JS -->
-        <script src="{%static "assets/assets/plugins/slimscroll/jquery.slimscroll.min.js"%}"></script>
-
-		<script src="{%static "assets/assets/plugins/raphael/raphael.min.js"%}"></script>
-		<script src="{%static "assets/assets/plugins/morris/morris.min.js"%}"></script>
-		<script src="{%static "assets/assets/js/chart.morris.js"%}"></script>
-
-		<!-- Custom JS -->
-		<script  src="{%static "assets/assets/js/script.js"%}"></script>
-    </body>
-
-<!-- Mirrored from doccure-html.dreamguystech.com/template/pharmacy/categories.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2020 11:52:36 GMT -->
-</html>
+		{%endblock%}

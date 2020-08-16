@@ -196,51 +196,22 @@ AMIS|Lab
     <thead>
       <tr>
         <th class="text-danger">Lab Name:</th>
-        <th class="text-danger">Lab ID:</th>
+        <th class="text-danger">Area Code</th>
         <th class="text-danger">View That Lab:</th>
       </tr>
     </thead>
     <tbody id="myTable">
+        {%for lab in data%}
       <tr>
-        <td>John</td>
-        <td>1234</td>
-        <td><a href="{% url 'formservice'%}"><i class="far fa-eye"></i></a></td>
+        <td>{{lab.user.first_name}}</td>
+        {%if lab.pin%}
+        <td>{{lab.pin}}</td>
+        {%else%}
+        <td>273001</td>
+        {%endif%}
+        <td><a href="{% url 'formservice'%}?pid={{lab.id}}"><i class="far fa-eye"></i></a></td>
       </tr>
-      <tr>
-        <td>Mary</td>
-        <td>567</td>
-        <td><a href="{% url 'formservice'%}"><i class="far fa-eye"></i></a></td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>8910</td>
-        <td><a href="{% url 'formservice'%}"> <i class="far fa-eye"></i></a></td>
-      </tr>
-      <tr>
-        <td>Anja</td>
-        <td>1298</td>
-        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
-      </tr>
-    <tr>
-        <td>John</td>
-        <td>1234</td>
-        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>567</td>
-        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>8910</td>
-        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
-      </tr>
-      <tr>
-        <td>Anja</td>
-        <td>1298</td>
-        <td><a href="{% url 'formservice'%}" ><i class="far fa-eye"></i></a></td>
-      </tr>
+      {%endfor%}
     </tbody>
   </table>
 

@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from amisapp1 import views
-
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
@@ -63,8 +64,13 @@ path('editproduct/', views.editproduct, name='editproduct'),
 path('dawaprofile/', views.dawaprofile, name='dawaprofile'),
 path('order/', views.order, name='order'),
 path('invoice/', views.invoice, name='invoice'),
+path('delete_product/',views.delete_product,name='delete_product'),
+path('ordtable/',views.ordtable,name='ordtable'),
+path('labprof/',views.labprof,name='labprof'),
+path('repform/',views.repform,name='repform'),
 
 
 
-]
+
+]+static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 

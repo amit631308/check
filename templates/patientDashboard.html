@@ -723,9 +723,9 @@ AMIS|Homepage
                                                 </div>
 
                                                 <label>Select Date</label>
+                                                <input type="date" name="date" class="form-control "  placeholder="mm/dd/yy" >
 
-                                                <input type="text" name="date" class="form-control datepickr" placeholder="mm/dd/yy" readonly>
-
+                                               
                                             </div>
 
                                         </div>
@@ -1771,6 +1771,9 @@ Emotional, social and spiritual support providers.
   </script>
   {%endif%}
 
+  <script>var date = $('#datepicker').datepicker({ dateFormat: 'dd-mm-yy' }).val();
+
+</script>
     <!-- Place all Scripts Here -->
 
     <!-- jQuery -->

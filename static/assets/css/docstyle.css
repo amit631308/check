@@ -1348,11 +1348,7 @@ button.bg-danger:hover {
 .custom-modal .modal-title {
 	font-size: 20px;
 }
-.modal-backdrop.show {
-    opacity: 0.4;
-	-webkit-transition-duration: 400ms;
-	transition-duration: 400ms;
-}
+
 .modal .card {
 	box-shadow: unset;
 }
@@ -5541,13 +5537,7 @@ html.menu-opened body {
 	33. Voice call
 -----------------------*/
 
-.modal-open .main-wrapper {
-    -webkit-filter: blur(1px);
-    -moz-filter: blur(1px);
-    -o-filter: blur(1px);
-    -ms-filter: blur(1px);
-    filter: blur(1px);
-}
+
 .call-main-row {
 	bottom: 0;
 	left: 0;
